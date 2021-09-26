@@ -31,6 +31,7 @@ set path+=**
 set wildmenu
 set guifont=MesloLGSDZ_NF:12
 set shortmess+=c
+set wildmode=longest
 
 let g:python3_host_prog = '/usr/bin/python3'
 
@@ -61,8 +62,9 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-colorscheme wal
-" let g:gruvbox_contrast_dark = "hard"
+" colorscheme wal
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
 
 let mapleader=" "
 inoremap ii <ESC><ESC>
@@ -109,6 +111,14 @@ com! WR call Writer()
 nnoremap <Leader>t :tabe<CR>
 nnoremap <Leader><TAB> :tabnext<CR>
 
+" Resize vertical split
+nnoremap <silent> <Leader>+ :vertical resize +5<CR>
+nnoremap <silent> <Leader>- :vertical resize -5<CR>
+
+" Make splits
+nnoremap <Leader>vs :<C-u>vsplit<CR>
+nnoremap <Leader>s :<C-u>split<CR>
+
 " Keep your cursor centered while jumping through search results or joining
 " lines.
 nnoremap n nzzzv
@@ -123,6 +133,8 @@ inoremap ? ?<c-g>u
 inoremap ) )<c-g>u
 inoremap ] ]<c-g>u
 inoremap } }<c-g>u
+inoremap > ><c-g>u
+inoremap ' '<c-g>u
 
 " Moving text
 vnoremap J :m '>+1<CR>gv=gv
@@ -131,6 +143,10 @@ inoremap <C-k> <ESC>:m .-2<CR>==a
 inoremap <C-j> <ESC>:m .+1<CR>==a
 " nnoremap <C-k> :m .-2<CR>==
 " nnoremap <C-j> :m .+1<CR>==
+
+" Keep the text selected while indenting
+vnoremap < <gv
+vnoremap > >gv
 
 " Easymotion config
 nmap <Leader>e <Plug>(easymotion-s2)
@@ -141,9 +157,10 @@ map <Leader>k <Plug>(easymotion-k)
 map <Leader>j <Plug>(easymotion-j)
 
 "NerdTree config
-nnoremap <Leader>nt :NERDTreeFind<CR>
+nnoremap <Leader>nt :NERDTree<CR>
 autocmd BufWinEnter * silent NERDTreeMirror
 let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
 
 "UndoTree config
 nnoremap <Leader>u :UndotreeShow<CR>
