@@ -1,4 +1,3 @@
-
 syntax enable
 
 set number
@@ -7,7 +6,7 @@ set numberwidth=1
 set clipboard+=unnamedplus
 set showcmd
 set ruler
-set encoding=utf-8
+set encoding=UTF-8
 set showmatch
 set tabstop=4 softtabstop=4
 set sw=4
@@ -29,9 +28,9 @@ set splitright
 set cursorline
 set path+=**
 set wildmenu
-set guifont=MesloLGSDZ_NF:12
 set shortmess+=c
-set wildmode=longest
+set guifont=FuraCode\ Nerd\ Font\ 11
+" set wildmode=longest
 
 let g:python3_host_prog = '/usr/bin/python3'
 
@@ -42,12 +41,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'dylanaraps/wal.vim'
 
     Plug 'easymotion/vim-easymotion'
-    Plug 'preservim/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'ThePrimeagen/vim-be-good'
-    Plug 'itchyny/lightline.vim'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     Plug 'mbbill/undotree'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
@@ -59,6 +58,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'hail2u/vim-css3-syntax'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
+    Plug 'vifm/vifm.vim'
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -75,6 +77,7 @@ nnoremap <Leader>rv :so $MYVIMRC<CR>
 nnoremap ; :
 nnoremap Y y$
 nnoremap o o<ESC>
+nnoremap O O<ESC>
 
 " Markers Autocomplete
 inoremap <Leader><Leader> <Esc>/<++><CR>"_c4l
@@ -111,13 +114,18 @@ com! WR call Writer()
 nnoremap <Leader>t :tabe<CR>
 nnoremap <Leader><TAB> :tabnext<CR>
 
+" Buffer navigation
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>bd :bdel<CR>
+
 " Resize vertical split
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 " Make splits
-nnoremap <Leader>vs :<C-u>vsplit<CR>
-nnoremap <Leader>s :<C-u>split<CR>
+" nnoremap <Leader>vs :<C-u>vsplit<CR>
+" nnoremap <Leader>s :<C-u>split<CR>
 
 " Keep your cursor centered while jumping through search results or joining
 " lines.
@@ -135,6 +143,7 @@ inoremap ] ]<c-g>u
 inoremap } }<c-g>u
 inoremap > ><c-g>u
 inoremap ' '<c-g>u
+inoremap : :<c-g>u
 
 " Moving text
 vnoremap J :m '>+1<CR>gv=gv
@@ -155,12 +164,6 @@ map <Leader>h <Plug>(easymotion-linebackward)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>j <Plug>(easymotion-j)
-
-"NerdTree config
-nnoremap <Leader>nt :NERDTree<CR>
-autocmd BufWinEnter * silent NERDTreeMirror
-let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=1
 
 "UndoTree config
 nnoremap <Leader>u :UndotreeShow<CR>
@@ -209,3 +212,29 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Killing netrw
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
+" Vifm config
+let g:vifm_replace_netrw = 1
+let g:vifm_replace_netrw_cmd = "Vifm"
+let g:vifm_embed_split = 1
+
+nnoremap <Leader>vs :VsplitVifm<CR>
+nnoremap <Leader>s :SplitVifm<CR>
+
+
+" Airline config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'solarized_flood'
+let g:airline_powerline_fonts = 1
+
+" Fugitive config
+nnoremap <Leader>gs :Git<CR>
+nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gh :diffget //3<CR>
+nnoremap <Leader>gu :diffget //2<CR>
+
+" GitGutter Config
+nnoremap <Leader>gg :GitGutterBufferToggle<CR>
