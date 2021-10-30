@@ -163,87 +163,15 @@ inoremap <C-j> <ESC>:m .+1<CR>==a
 vnoremap < <gv
 vnoremap > >gv
 
-" Easymotion config
-nmap <Leader>e <Plug>(easymotion-s2)
-let g:EasyMotion_smartcase = 1
-map <Leader>h <Plug>(easymotion-linebackward)
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>j <Plug>(easymotion-j)
-
-"UndoTree config
-nnoremap <Leader>u :UndotreeShow<CR>
-
-"Emmet config
-let g:user_emmet_leader_key='<c-e>'
-
-" IndentLine config
-let g:indentLine_setColor = 0
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-" COC Config
-autocmd FileType scss setl iskeyword+=@-@
-
-" Use <c-space> to trigger completion
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
-
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Killing netrw
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
-
-" Vifm config
-let g:vifm_replace_netrw = 1
-let g:vifm_replace_netrw_cmd = "Vifm"
-let g:vifm_embed_split = 1
-
-nnoremap <Leader>vs :VsplitVifm<CR>
-nnoremap <Leader>s :SplitVifm<CR>
-
-
-" Airline config
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'solarized_flood'
-let g:airline_powerline_fonts = 1
-
-" Fugitive config
-nnoremap <Leader>gs :Git<CR>
-nnoremap <Leader>gp :Git push<CR>
-nnoremap <Leader>gh :diffget //3<CR>
-nnoremap <Leader>gu :diffget //2<CR>
-
-" GitGutter Config
-nnoremap <Leader>gg :GitGutterBufferToggle<CR>
-
-" Markdown config
-let g:vim_markdown_conceal = 0
+" Plugins Config files
+source ~/.vim/plugin-config/easymotion.vim
+source ~/.vim/plugin-config/undotree.vim
+source ~/.vim/plugin-config/emmet.vim
+source ~/.vim/plugin-config/indentline.vim
+source ~/.vim/plugin-config/coc.vim
+source ~/.vim/plugin-config/netrw.vim
+source ~/.vim/plugin-config/vifm.vim
+source ~/.vim/plugin-config/airline.vim
+source ~/.vim/plugin-config/fugitive.vim
+source ~/.vim/plugin-config/gitgutter.vim
+source ~/.vim/plugin-config/vim-markdown.vim
