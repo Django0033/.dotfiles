@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugged')
 
     " Themes
     Plug 'morhetz/gruvbox'
+    Plug 'dracula/vim',{'as':'dracula'}
     Plug 'dylanaraps/wal.vim'
 
     Plug 'easymotion/vim-easymotion'
@@ -69,8 +70,9 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " colorscheme wal
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+" colorscheme gruvbox
+colorscheme dracula
+" let g:gruvbox_contrast_dark = "hard"
 
 let mapleader=" "
 inoremap ii <ESC><ESC>
