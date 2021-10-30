@@ -31,6 +31,8 @@ keys(){
 xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 }
 
-neofetch
+# neofetch
+# colorscript -r
+./fm6000 -r -c random
 
 set -o vi
