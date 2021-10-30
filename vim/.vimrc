@@ -3,7 +3,8 @@ syntax enable
 set number
 set mouse=a
 set numberwidth=1
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
+set clipboard+=unnamed
 set showcmd
 set ruler
 set encoding=UTF-8
@@ -61,6 +62,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vifm/vifm.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
+    Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -80,6 +82,10 @@ nnoremap o o<ESC>
 nnoremap O O<ESC>
 
 " Markers Autocomplete
+" In insert mode type a and the opening of the pair you wanna use, it will
+" create the closing pair and <++> outside the pair. When you finish typing,
+" just hit the leader key twice to jump to the mark outside the pair and
+" delete the mark.
 inoremap <Leader><Leader> <Esc>/<++><CR>"_c4l
 inoremap a( ()<++><Esc>F)i
 inoremap a{ {}<++><Esc>F}i
@@ -91,8 +97,8 @@ inoremap a" ""<++><Esc>F"i
 inoremap a` ``<++><Esc>F`i
 
 " Copy and paste from and to out of vim
-vnoremap <C-c> "+y
-map <C-v> "+P
+" vnoremap <C-c> "+y
+" map <C-v> "+P
 
 " Change word under the cursor and the next match with `.`
 nnoremap c* *``cgn
@@ -238,3 +244,6 @@ nnoremap <Leader>gu :diffget //2<CR>
 
 " GitGutter Config
 nnoremap <Leader>gg :GitGutterBufferToggle<CR>
+
+" Markdown config
+let g:vim_markdown_conceal = 0
