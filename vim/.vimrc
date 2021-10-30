@@ -63,6 +63,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'github/copilot.vim'
+    Plug 'tpope/vim-repeat'
+    Plug 'honza/vim-snippets'
 
 call plug#end()
 
