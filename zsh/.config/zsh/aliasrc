@@ -1,0 +1,14 @@
+
+# Alias
+alias sd='sudo shutdown'
+alias sdn='sudo shutdown now'
+alias ls='ls --color=auto --group-directories-first'
+alias ll='ls -l --color=auto --group-directories-first'
+alias la='ls -la --color=auto --group-directories-first'
+alias p='sudo pacman'
+alias nv='nvim'
+alias r='ranger'
+alias g='git'
+alias mkd='mkdir'
+alias yt='youtube-dl --add-metadata -ic -o "%(title)s.%(ext)s"'
+alias yta='youtube-dl --add-metadata -xic --audio-format mp3 -o "%(title)s.%(ext)s"'
