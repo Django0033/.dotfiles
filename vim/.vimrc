@@ -3,8 +3,7 @@ syntax enable
 set number
 set mouse=a
 set numberwidth=1
-" set clipboard+=unnamedplus
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 set showcmd
 set ruler
 set encoding=UTF-8
