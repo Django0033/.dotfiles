@@ -74,7 +74,7 @@ colorscheme dracula
 " let g:gruvbox_contrast_dark = "hard"
 
 let mapleader=" "
-inoremap ii <ESC><ESC>
+inoremap ii <ESC><ESC>:w<CR>
 vnoremap ii <ESC><ESC>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
