@@ -202,3 +202,15 @@ config.bind('Z', 'hint links spawn st -e youtube-dl --add-metadata -ic -o "%(tit
 config.bind('xb', 'config-cycle statusbar.show never always')
 config.bind('xt', 'config-cycle tabs.show never always')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show never always ')
+
+import dracula.draw
+
+# Load existing settings made via :set
+config.load_autoconfig()
+
+dracula.draw.blood(c, {
+    'spacing': {
+        'vertical': 6,
+        'horizontal': 8
+    }
+})
