@@ -31,8 +31,18 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+colors = [["#282a36", "#282a36"], # panel background
+          ["#3d3f4b", "#434758"], # background for current screen tab
+          ["#ffffff", "#ffffff"], # font color for group names
+          ["#ff5555", "#ff5555"], # border line color for current tab
+          ["#74438f", "#74438f"], # border line color for 'other tabs' and color for 'odd widgets'
+          ["#4f76c7", "#4f76c7"], # color for the 'even widgets'
+          ["#be93f9", "#be93f9"], # window name
+          ["#ff79c6", "#ff79c6"]] # backbround for inactive screens
+
 mod = "mod4"
 terminal = guess_terminal()
+browser = 'qutebrowser'
 
 keys = [
     # Switch between windows
@@ -101,7 +111,10 @@ for i in groups:
     ])
 
 layouts = [
-    layout.Columns(border_focus_stack=['#d75f5f', '#8f3d3d'], border_width=3),
+    layout.Columns(
+        border_focus_stack=[colors[6], colors[7]], 
+        border_width=3
+        ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -127,28 +140,95 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.CurrentLayout(
+                    foreground = colors[7],
+                    background = colors[0],
+                    ),
+                widget.GroupBox(
+                    # fontsize = 9,
+                    # margin_y = 3,
+                    # margin_x = 0,
+                    # padding_y = 5,
+                    # padding_x = 3,
+                    borderwidth = 3,
+                    active = colors[2],
+                    inactive = colors[7],
+                    rounded = False,
+                    highlight_color = colors[1],
+                    highlight_method = "line",
+                    this_current_screen_border = colors[6],
+                    this_screen_border = colors [4],
+                    other_current_screen_border = colors[6],
+                    other_screen_border = colors[4],
+                    foreground = colors[2],
+                    background = colors[0]
+                    ),
                 # widget.Prompt(),
-                widget.TextBox("|"),
-                widget.WindowCount(),
-                widget.TextBox("|"),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
+                widget.TextBox(
+                    "|",
+                    foreground = colors[7],
+                    background = colors[0]
+                    ),
+                widget.WindowCount(
+                    foreground = colors[7],
+                    background = colors[0]
+                    ),
+                widget.TextBox(
+                    "|",
+                    foreground = colors[7],
+                    background = colors[0]
+                    ),
+                widget.WindowName(
+                    foreground = colors[7],
+                    background = colors[0]
+                    ),
+                # widget.Chord(
+                #     chords_colors={
+                #         'launch': ("#ff0000", "#ffffff"),
+                #     },
+                #     name_transform=lambda name: name.upper(),
+                # ),
                 # widget.TextBox("default config", name="default"),
                 # widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                widget.Net(),
-                widget.Systray(),
-                widget.TextBox("|"),
-                widget.PulseVolume(),
-                # widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.TextBox("|"),
-                widget.Clock(format='%d-%m-%Y %a %H:%M'),
+                widget.Systray(
+                    background = colors[5],
+                    padding = 5,
+                    ),
+                widget.TextBox(
+                    "",
+                    foreground = colors[1],
+                    background = colors[0],
+                    padding = 0,
+                    fontsize = 54
+                    ),
+                widget.Net(
+                    foreground = colors[7],
+                    background = colors[1],
+                    ),
+                widget.TextBox(
+                    "",
+                    foreground = colors[0],
+                    background = colors[1],
+                    padding = 0,
+                    fontsize = 54
+                    ),
+                widget.PulseVolume(
+                    foreground = colors[7],
+                    background = colors[0],
+                    padding =5
+                    ),
+                widget.TextBox(
+                    "",
+                    foreground = colors[1],
+                    background = colors[0],
+                    padding = 0,
+                    fontsize = 54
+                    ),
+                widget.Clock(
+                    foreground = colors[7],
+                    background = colors[1],
+                    format='%d-%m-%Y %a %H:%M'
+                    ),
                 # widget.QuickExit(),
             ],
             24,
