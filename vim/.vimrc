@@ -65,6 +65,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'github/copilot.vim'
     Plug 'tpope/vim-repeat'
     Plug 'honza/vim-snippets'
+    Plug 'vimwiki/vimwiki'
+    Plug 'michal-h21/vim-zettel'
+    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
