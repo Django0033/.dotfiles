@@ -11,6 +11,7 @@
 #   qute://help/settings.html
 
 # Change the argument to True to still load settings configured via autoconfig.yml
+import dracula.draw
 config.load_autoconfig(False)
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
@@ -64,7 +65,8 @@ config.set('content.cookies.accept', 'all', 'devtools://*')
 # Value to send in the `Accept-Language` header. Note that the value
 # read from JavaScript is always the global value.
 # Type: String
-config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
+config.set('content.headers.accept_language',
+           '', 'https://matchmaker.krunker.io/*')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -80,7 +82,8 @@ config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
+config.set('content.headers.user_agent',
+           'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -96,7 +99,8 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{w
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
+config.set('content.headers.user_agent',
+           'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -112,7 +116,8 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
+config.set('content.headers.user_agent',
+           'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
 
 # Load images automatically in web pages.
 # Type: Bool
@@ -198,12 +203,13 @@ c.colors.webpage.darkmode.enabled = True
 
 # Bindings for normal mode
 config.bind('M', 'hint links spawn mpv {hint-url}')
-config.bind('Z', 'hint links spawn st -e youtube-dl --add-metadata -ic -o "%(title)s.%(ext)s" {hint-url}')
+config.bind(
+    'Z', 'hint links spawn st -e youtube-dl --add-metadata -ic -o "%(title)s.%(ext)s" {hint-url}')
 config.bind('xb', 'config-cycle statusbar.show never always')
 config.bind('xt', 'config-cycle tabs.show never always')
-config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show never always ')
+config.bind(
+    'xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show never always ')
 
-import dracula.draw
 
 # Load existing settings made via :set
 config.load_autoconfig()
@@ -214,3 +220,5 @@ dracula.draw.blood(c, {
         'horizontal': 8
     }
 })
+
+config.set('hints.chars', 'aoeuidhtns')
