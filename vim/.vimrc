@@ -182,3 +182,12 @@ source ~/.vim/plugin-config/airline.vim
 source ~/.vim/plugin-config/fugitive.vim
 source ~/.vim/plugin-config/gitgutter.vim
 source ~/.vim/plugin-config/vim-markdown.vim
+
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'},
+            \ {'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'}]
+
+let g:vimwiki_markdown_link_ext = 0
+
+" Vim-Zettel
+" let g:zettel_format = "%title-%d%m%y"
+let g:zettel_format = "%title"
