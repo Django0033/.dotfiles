@@ -69,6 +69,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'michal-h21/vim-zettel'
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
+    Plug 'liuchengxu/vim-which-key'
+    Plug 'chun-yang/auto-pairs'
 
 call plug#end()
 
@@ -191,3 +193,5 @@ let g:vimwiki_markdown_link_ext = 0
 " Vim-Zettel
 " let g:zettel_format = "%title-%d%m%y"
 let g:zettel_format = "%title"
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
