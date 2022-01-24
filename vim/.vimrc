@@ -95,15 +95,15 @@ nnoremap O O<ESC>
 " create the closing pair and <++> outside the pair. When you finish typing,
 " just hit the leader key twice to jump to the mark outside the pair and
 " delete the mark.
-inoremap <Leader><Leader> <Esc>/<++><CR>"_c4l
-inoremap a( ()<++><Esc>F)i
-inoremap a{ {}<++><Esc>F}i
-inoremap a{<CR> {<CR><CR>}<CR><++><Esc>2ki
-inoremap a[ []<++><Esc>F]i
-inoremap a< <><++><Esc>F>i
-inoremap a' ''<++><Esc>F'i
-inoremap a" ""<++><Esc>F"i
-inoremap a` ``<++><Esc>F`i
+" inoremap <Leader><Leader> <Esc>/<++><CR>"_c4l
+" inoremap a( ()<++><Esc>F)i
+" inoremap a{ {}<++><Esc>F}i
+" inoremap a{<CR> {<CR><CR>}<CR><++><Esc>2ki
+" inoremap a[ []<++><Esc>F]i
+" inoremap a< <><++><Esc>F>i
+" inoremap a' ''<++><Esc>F'i
+" inoremap a" ""<++><Esc>F"i
+" inoremap a` ``<++><Esc>F`i
 
 " Copy and paste from and to out of vim
 " vnoremap <C-c> "+y
