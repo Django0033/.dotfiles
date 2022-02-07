@@ -70,7 +70,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
     Plug 'liuchengxu/vim-which-key'
-    Plug 'chun-yang/auto-pairs'
+    Plug 'vim-test/vim-test'
+    Plug 'nvie/vim-flake8'
+    Plug 'psf/black'
+    Plug 'w0rp/ale'
+    " Plug 'chun-yang/auto-pairs'
 
 call plug#end()
 
@@ -184,6 +188,8 @@ source ~/.vim/plugin-config/airline.vim
 source ~/.vim/plugin-config/fugitive.vim
 source ~/.vim/plugin-config/gitgutter.vim
 source ~/.vim/plugin-config/vim-markdown.vim
+source ~/.vim/plugin-config/vim-test.vim
+source ~/.vim/plugin-config/ale.vim
 
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'},
             \ {'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'}]
