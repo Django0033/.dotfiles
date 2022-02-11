@@ -74,6 +74,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvie/vim-flake8'
     Plug 'psf/black'
     Plug 'w0rp/ale'
+    Plug 'puremourning/vimspector'
+    Plug 'vim-ctrlspace/vim-ctrlspace'
     " Plug 'chun-yang/auto-pairs'
 
 call plug#end()
@@ -93,6 +95,7 @@ nnoremap ; :
 nnoremap Y y$
 nnoremap o o<ESC>
 nnoremap O O<ESC>
+nnoremap <Leader>vi :e.<CR>
 
 " Markers Autocomplete
 " In insert mode type a and the opening of the pair you wanna use, it will
@@ -190,6 +193,7 @@ source ~/.vim/plugin-config/gitgutter.vim
 source ~/.vim/plugin-config/vim-markdown.vim
 source ~/.vim/plugin-config/vim-test.vim
 source ~/.vim/plugin-config/ale.vim
+source ~/.vim/plugin-config/vimspector.vim
 
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'},
             \ {'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'}]
