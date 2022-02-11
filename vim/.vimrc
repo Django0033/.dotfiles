@@ -76,6 +76,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'puremourning/vimspector'
     Plug 'vim-ctrlspace/vim-ctrlspace'
+    Plug 'mhinz/vim-startify'
     " Plug 'chun-yang/auto-pairs'
 
 call plug#end()
@@ -86,7 +87,8 @@ colorscheme dracula
 " let g:gruvbox_contrast_dark = "hard"
 
 let mapleader=" "
-inoremap ii <ESC><ESC>:w<CR>
+" inoremap ii <ESC><ESC>:w<CR>
+inoremap ii <ESC><ESC>
 vnoremap ii <ESC><ESC>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -134,16 +136,31 @@ com! WR call Writer()
 
 " Change tab
 nnoremap <Leader>t :tabe<CR>
-nnoremap <Leader><TAB> :tabnext<CR>
+" nnoremap <Leader><TAB> :tabnext<CR>
 
 " Buffer navigation
-nnoremap <Leader>bn :bn<CR>
-nnoremap <Leader>bp :bp<CR>
+" nnoremap <Leader>bn :bn<CR>
+" nnoremap <Leader>bp :bp<CR>
 nnoremap <Leader>bd :bdel<CR>
 
 " Resize vertical split
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
+
+" Resize the current split to at least (90,25) but no more than (140,60)
+" or 2/3 of the available space otherwise.
+
+function Splitresize()
+    let hmax = max([winwidth(0), float2nr(&columns*0.66), 90])
+    let vmax = max([winheight(0), float2nr(&lines*0.66), 25])
+    exe "vertical resize" . (min([hmax, 140]))
+    exe "resize" . (min([vmax, 60]))
+endfunction
+
+nnoremap <Leader><Leader>j <C-W><C-J>:call Splitresize()<CR>
+nnoremap <Leader><Leader>k <C-W><C-K>:call Splitresize()<CR>
+nnoremap <Leader><Leader>l <C-W><C-L>:call Splitresize()<CR>
+nnoremap <Leader><Leader>h <C-W><C-H>:call Splitresize()<CR>
 
 " Make splits
 " nnoremap <Leader>vs :<C-u>vsplit<CR>
@@ -194,6 +211,7 @@ source ~/.vim/plugin-config/vim-markdown.vim
 source ~/.vim/plugin-config/vim-test.vim
 source ~/.vim/plugin-config/ale.vim
 source ~/.vim/plugin-config/vimspector.vim
+source ~/.vim/plugin-config/ctrlspace.vim
 
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'},
             \ {'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'}]
