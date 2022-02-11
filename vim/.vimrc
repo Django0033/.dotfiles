@@ -1,3 +1,11 @@
+
+"  _    ________  _______  ______
+" | |  / /  _/  |/  / __ \/ ____/
+" | | / // // /|_/ / /_/ / /     
+" | |/ // // /  / / _, _/ /___   
+" |___/___/_/  /_/_/ |_|\____/   
+
+
 syntax enable
 
 set number
@@ -212,6 +220,7 @@ source ~/.vim/plugin-config/vim-test.vim
 source ~/.vim/plugin-config/ale.vim
 source ~/.vim/plugin-config/vimspector.vim
 source ~/.vim/plugin-config/ctrlspace.vim
+source ~/.vim/plugin-config/startify.vim
 
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'},
             \ {'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'}]
