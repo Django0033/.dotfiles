@@ -1,9 +1,9 @@
 
 "  _    ________  _______  ______
 " | |  / /  _/  |/  / __ \/ ____/
-" | | / // // /|_/ / /_/ / /     
-" | |/ // // /  / / _, _/ /___   
-" |___/___/_/  /_/_/ |_|\____/   
+" | | / // // /|_/ / /_/ / /
+" | |/ // // /  / / _, _/ /___
+" |___/___/_/  /_/_/ |_|\____/
 
 
 syntax enable
@@ -38,7 +38,7 @@ set path+=**
 set wildmenu
 set shortmess+=c
 set guifont=FuraCode\ Nerd\ Font\ 11
-" set wildmode=longest
+set wildmode=longest
 
 let g:python3_host_prog = '/usr/bin/python3'
 
@@ -47,12 +47,8 @@ call plug#begin('~/.vim/plugged')
     " Themes
     Plug 'morhetz/gruvbox'
     Plug 'dracula/vim',{'as':'dracula'}
-    Plug 'dylanaraps/wal.vim'
 
     Plug 'easymotion/vim-easymotion'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'christoomey/vim-tmux-navigator'
     Plug 'ThePrimeagen/vim-be-good'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -85,18 +81,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'puremourning/vimspector'
     Plug 'vim-ctrlspace/vim-ctrlspace'
     Plug 'mhinz/vim-startify'
-    " Plug 'chun-yang/auto-pairs'
 
 call plug#end()
 
-" colorscheme wal
 " colorscheme gruvbox
 colorscheme dracula
 " let g:gruvbox_contrast_dark = "hard"
 
 let mapleader=" "
 " inoremap ii <ESC><ESC>:w<CR>
-inoremap ii <ESC><ESC>
+inoremap ii <ESC><ESC>:w<CR>
 vnoremap ii <ESC><ESC>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -155,9 +149,13 @@ nnoremap <Leader>bd :bdel<CR>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Resize the current split to at least (90,25) but no more than (140,60)
 " or 2/3 of the available space otherwise.
-
 function Splitresize()
     let hmax = max([winwidth(0), float2nr(&columns*0.66), 90])
     let vmax = max([winheight(0), float2nr(&lines*0.66), 25])
@@ -225,10 +223,10 @@ source ~/.vim/plugin-config/startify.vim
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'},
             \ {'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'}]
 
-let g:vimwiki_markdown_link_ext = 0
+let g:vimwiki_markdown_link_ext = 1
 
 " Vim-Zettel
-" let g:zettel_format = "%title-%d%m%y"
 let g:zettel_format = "%title"
+nnoremap <Leader>zn :ZettelNew<Space>
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
