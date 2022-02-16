@@ -1,4 +1,4 @@
 " Config
 
 " Keybindings
-nnoremap <Leader>gg :GitGutterBufferToggle<CR>
+nnoremap <Leader>gt :GitGutterBufferToggle<CR>
