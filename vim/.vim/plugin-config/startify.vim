@@ -19,3 +19,5 @@ let g:startify_bookmarks = [
             \ { 'rc': '~/.vimrc' },
             \ { 'z': '~/.zshrc' },
             \ ]
+
+nnoremap <Leader>gg :Startify<CR>
