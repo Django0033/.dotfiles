@@ -1,3 +1,5 @@
+let g:vimspector_enable_mappings = 'HUMAN'
+" packadd!vimspector
 nnoremap <Leader>da :call vimspector#Launch()<CR>
 nnoremap <Leader>dx :call vimspector#Reset()<CR>
 nnoremap <S-k> :call vimspector#StepOut()<CR>
@@ -16,4 +18,4 @@ func! AddToWatch()
     call vimspector#AddToWatch(word)
 endfunction
 
-let g:vimspector_base_dir = expand("~/.config/vimspector-config")
+" let g:vimspector_base_dir = expand("~/.config/vimspector-config")
