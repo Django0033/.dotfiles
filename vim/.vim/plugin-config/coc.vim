@@ -2,6 +2,8 @@
 autocmd FileType scss setl iskeyword+=@-@
 
 " Keybindings
+nmap <Leader>gd <Plug>(coc-definition)
+nmap <Leader>gr <Plug>(coc-references)
 
 " Functions
 " Use <c-space> to trigger completion
