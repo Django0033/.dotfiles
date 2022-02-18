@@ -48,6 +48,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'dracula/vim',{'as':'dracula'}
 
+    Plug 'scrooloose/nerdtree'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'xuyuanp/nerdtree-git-plugin'
     Plug 'easymotion/vim-easymotion'
     Plug 'ThePrimeagen/vim-be-good'
     Plug 'vim-airline/vim-airline'
@@ -99,7 +102,6 @@ nnoremap ; :
 nnoremap Y y$
 nnoremap o o<ESC>
 nnoremap O O<ESC>
-nnoremap <Leader>vi :e.<CR>
 
 " Markers Autocomplete
 " In insert mode type a and the opening of the pair you wanna use, it will
@@ -203,6 +205,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Plugins Config files
+source ~/.vim/plugin-config/nerdtree.vim
 source ~/.vim/plugin-config/easymotion.vim
 source ~/.vim/plugin-config/undotree.vim
 source ~/.vim/plugin-config/emmet.vim
