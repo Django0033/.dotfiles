@@ -82,8 +82,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'psf/black'
     Plug 'w0rp/ale'
     Plug 'puremourning/vimspector'
-    Plug 'vim-ctrlspace/vim-ctrlspace'
     Plug 'mhinz/vim-startify'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'cljoly/telescope-repo.nvim'
+    Plug 'airblade/vim-rooter'
 
 call plug#end()
 
@@ -140,7 +144,7 @@ com! WR call Writer()
 
 " Change tab
 nnoremap <Leader>t :tabe<CR>
-" nnoremap <Leader><TAB> :tabnext<CR>
+nnoremap <Leader><TAB> :tabnext<CR>
 
 " Buffer navigation
 " nnoremap <Leader>bn :bn<CR>
@@ -220,8 +224,11 @@ source ~/.vim/plugin-config/vim-markdown.vim
 source ~/.vim/plugin-config/vim-test.vim
 source ~/.vim/plugin-config/ale.vim
 source ~/.vim/plugin-config/vimspector.vim
-source ~/.vim/plugin-config/ctrlspace.vim
+" source ~/.vim/plugin-config/ctrlspace.vim
 source ~/.vim/plugin-config/startify.vim
+source ~/.vim/plugin-config/prettier.vim
+source ~/.vim/plugin-config/telescope.vim
+source ~/.vim/plugin-config/vim-rooter.vim
 
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'},
             \ {'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'}]
