@@ -1,6 +1,4 @@
 let g:ale_linters = {
-            \   'python': ['flake8'],
-            \   'python3': ['flake8'],
             \   'css': ['csslint'],
             \   'html': ['htmlhint'],
             \}
