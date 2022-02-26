@@ -5,7 +5,6 @@
 " | |/ // // /  / / _, _/ /___
 " |___/___/_/  /_/_/ |_|\____/
 
-
 syntax enable
 
 set number
@@ -48,6 +47,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'dracula/vim',{'as':'dracula'}
 
+    Plug 'neovim/nvim-lspconfig'
     Plug 'scrooloose/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'xuyuanp/nerdtree-git-plugin'
@@ -58,6 +58,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'mbbill/undotree'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-fugitive'
     Plug 'ryanoasis/vim-devicons'
     Plug 'mattn/emmet-vim'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -67,20 +69,17 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
     Plug 'vifm/vifm.vim'
-    Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'junegunn/gv.vim'
     Plug 'github/copilot.vim'
-    Plug 'tpope/vim-repeat'
     Plug 'honza/vim-snippets'
     Plug 'vimwiki/vimwiki'
-    Plug 'michal-h21/vim-zettel'
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
+    " Plug 'michal-h21/vim-zettel'
+    " Plug 'junegunn/fzf'
+    " Plug 'junegunn/fzf.vim'
     Plug 'liuchengxu/vim-which-key'
     Plug 'vim-test/vim-test'
-    Plug 'nvie/vim-flake8'
-    Plug 'psf/black'
+    Plug 'ambv/black'
     Plug 'w0rp/ale'
     Plug 'puremourning/vimspector'
     Plug 'mhinz/vim-startify'
@@ -89,6 +88,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'cljoly/telescope-repo.nvim'
     Plug 'airblade/vim-rooter'
+    Plug 'ElPiloto/telescope-vimwiki.nvim'
+    Plug 'AckslD/nvim-neoclip.lua'
 
 call plug#end()
 
@@ -225,19 +226,19 @@ source ~/.vim/plugin-config/vim-markdown.vim
 source ~/.vim/plugin-config/vim-test.vim
 source ~/.vim/plugin-config/ale.vim
 source ~/.vim/plugin-config/vimspector.vim
-" source ~/.vim/plugin-config/ctrlspace.vim
 source ~/.vim/plugin-config/startify.vim
 source ~/.vim/plugin-config/prettier.vim
 source ~/.vim/plugin-config/telescope.vim
 source ~/.vim/plugin-config/vim-rooter.vim
+source ~/.vim/plugin-config/lspconfigfile.vim
 
-let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'},
-            \ {'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'}]
+let g:vimwiki_list = [{'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'},
+            \ {'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'}]
 
 let g:vimwiki_markdown_link_ext = 1
 
 " Vim-Zettel
-let g:zettel_format = "%title"
-nnoremap <Leader>zn :ZettelNew<Space>
+" let g:zettel_format = "%title"
+" nnoremap <Leader>zn :ZettelNew<Space>
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
