@@ -6,7 +6,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fr <cmd>Telescope repo list<cr>
 nnoremap <leader>fk <cmd>Telescope keymaps<cr>
 nnoremap <leader>fy <cmd>Telescope neoclip<cr>
-nnoremap <leader>fz <cmd>Telescope vimwiki i=1<cr>
+nnoremap <leader>fw <cmd>Telescope vimwiki<cr>
+nnoremap <leader>fwg <cmd>Telescope vimwiki live_grep<cr>
 
 lua require'telescope'.load_extension'repo'
 lua require'telescope'.load_extension'vimwiki'
