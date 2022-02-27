@@ -238,7 +238,7 @@ let g:vimwiki_list = [{'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 
 let g:vimwiki_markdown_link_ext = 1
 
 " Vim-Zettel
-" let g:zettel_format = "%title"
-" nnoremap <Leader>zn :ZettelNew<Space>
+let g:zettel_format = "%title"
+nnoremap <Leader>zn :ZettelNew<Space>
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
