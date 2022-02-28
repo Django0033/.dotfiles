@@ -90,6 +90,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-rooter'
     Plug 'ElPiloto/telescope-vimwiki.nvim'
     Plug 'AckslD/nvim-neoclip.lua'
+    Plug 'RRethy/vim-illuminate'
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
@@ -102,7 +104,7 @@ let mapleader=" "
 inoremap ii <ESC><ESC>:w<CR>
 vnoremap ii <ESC><ESC>
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
+" nnoremap <Leader>q :q<CR>
 nnoremap <Leader>rv :so $MYVIMRC<CR>
 nnoremap ; :
 nnoremap Y y$
@@ -149,9 +151,10 @@ nnoremap <Leader>t :tabe<CR>
 nnoremap <Leader><TAB> :tabnext<CR>
 
 " Buffer navigation
-" nnoremap <Leader>bn :bn<CR>
-" nnoremap <Leader>bp :bp<CR>
-nnoremap <Leader>bd :bdel<CR>
+nnoremap <S-l> :bn<CR>
+nnoremap <S-h> :bp<CR>
+nnoremap <Leader>q :bdel<CR>
+nnoremap <Leader>bq :%bd\|e#\|bd#<CR>
 
 " Resize vertical split
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
@@ -232,6 +235,7 @@ source ~/.vim/plugin-config/telescope.vim
 source ~/.vim/plugin-config/vim-rooter.vim
 source ~/.vim/plugin-config/lspconfigfile.vim
 source ~/.vim/plugin-config/illuminate.vim
+source ~/.vim/plugin-config/vim-visual-multi.vim
 
 let g:vimwiki_list = [{'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'},
             \ {'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'}]
