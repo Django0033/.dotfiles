@@ -231,6 +231,7 @@ source ~/.vim/plugin-config/prettier.vim
 source ~/.vim/plugin-config/telescope.vim
 source ~/.vim/plugin-config/vim-rooter.vim
 source ~/.vim/plugin-config/lspconfigfile.vim
+source ~/.vim/plugin-config/illuminate.vim
 
 let g:vimwiki_list = [{'path': '~/Documents/markdown/', 'ext': '.md', 'syntax': 'markdown'},
             \ {'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html/'}]
