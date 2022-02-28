@@ -2,9 +2,9 @@ let g:vimspector_enable_mappings = 'HUMAN'
 " packadd!vimspector
 nnoremap <Leader>da :call vimspector#Launch()<CR>
 nnoremap <Leader>dx :call vimspector#Reset()<CR>
-nnoremap <S-k> :call vimspector#StepOut()<CR>
-nnoremap <S-l> :call vimspector#StepInto()<CR>
-nnoremap <S-j> :call vimspector#StepOver()<CR>
+nnoremap <A-k> :call vimspector#StepOut()<CR>
+nnoremap <A-l> :call vimspector#StepInto()<CR>
+nnoremap <A-j> :call vimspector#StepOver()<CR>
 nnoremap <Leader>d_ :call vimspector#Restart()<CR>
 nnoremap <Leader>dn :call vimspector#Continue()<CR>
 nnoremap <Leader>drc :call vimspector#RunToCursor()<CR>
