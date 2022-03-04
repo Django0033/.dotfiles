@@ -5,6 +5,9 @@
 " | |/ // // /  / / _, _/ /___
 " |___/___/_/  /_/_/ |_|\____/
 
+"""""""""""""
+" Set Block "
+" """""""""""
 syntax enable
 
 set number
@@ -38,15 +41,13 @@ set wildmenu
 set shortmess+=c
 set guifont=FuraCode\ Nerd\ Font\ 11
 set wildmode=longest
+set foldlevel=1
 
 let g:python3_host_prog = '/usr/bin/python3'
 
 call plug#begin('~/.vim/plugged')
-
-    " Themes
     Plug 'morhetz/gruvbox'
     Plug 'dracula/vim',{'as':'dracula'}
-
     Plug 'neovim/nvim-lspconfig'
     Plug 'scrooloose/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -92,7 +93,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'AckslD/nvim-neoclip.lua'
     Plug 'RRethy/vim-illuminate'
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-
 call plug#end()
 
 " colorscheme gruvbox
@@ -213,7 +213,23 @@ inoremap <C-j> <ESC>:m .+1<CR>==a
 vnoremap < <gv
 vnoremap > >gv
 
-" Plugins Config files
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
+
+augroup vimrc
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+augroup END
+
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+""""""""""""""""""""""""
+" Plugins Config files "
+""""""""""""""""""""""""
 source ~/.vim/plugin-config/nerdtree.vim
 source ~/.vim/plugin-config/easymotion.vim
 source ~/.vim/plugin-config/undotree.vim
