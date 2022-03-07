@@ -207,15 +207,15 @@ screens = [
                     background=colors[0],
                 ),
                 widget.Systray(
-                    background=colors[5],
-                    padding=5,
+                    background=colors[0],
+                    padding=9,
                 ),
                 widget.TextBox(
                     "",
                     foreground=colors[1],
                     background=colors[0],
-                    padding=0,
-                    fontsize=54,
+                    padding=-15,
+                    fontsize=72,
                 ),
                 widget.Pomodoro(
                     prefix_inactive="Pomodoro",
@@ -227,6 +227,7 @@ screens = [
                     length_short_break=9,
                     length_long_break=18,
                     num_pomodori=4,
+                    margin_x=0,
                 ),
                 # widget.CPUGraph(
                 #     foreground=colors[7],
@@ -236,8 +237,8 @@ screens = [
                     "",
                     foreground=colors[0],
                     background=colors[1],
-                    padding=0,
-                    fontsize=54,
+                    padding=-15,
+                    fontsize=72,
                 ),
                 widget.PulseVolume(
                     foreground=colors[7], background=colors[0], padding=5
@@ -246,8 +247,8 @@ screens = [
                     "",
                     foreground=colors[1],
                     background=colors[0],
-                    padding=0,
-                    fontsize=54,
+                    fontsize=72,
+                    padding=-15,
                 ),
                 widget.Clock(
                     foreground=colors[7],
