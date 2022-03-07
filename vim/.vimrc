@@ -93,6 +93,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'AckslD/nvim-neoclip.lua'
     Plug 'RRethy/vim-illuminate'
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    Plug 'jupyter-vim/jupyter-vim'
+    Plug 'untitled-ai/jupyter_ascending.vim'
 call plug#end()
 
 " colorscheme gruvbox
@@ -261,5 +263,6 @@ let g:vimwiki_markdown_link_ext = 1
 " Vim-Zettel
 let g:zettel_format = "%title"
 nnoremap <Leader>zn :ZettelNew<Space>
+nnoremap <Leader>zb :ZettelBackLinks<CR>
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
