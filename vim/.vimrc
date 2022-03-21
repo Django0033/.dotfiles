@@ -41,7 +41,6 @@ set wildmenu
 set shortmess+=c
 set guifont=FuraCode\ Nerd\ Font\ 11
 set wildmode=longest
-set foldlevel=1
 
 let g:python3_host_prog = '/usr/bin/python3'
 
@@ -102,35 +101,14 @@ colorscheme dracula
 " let g:gruvbox_contrast_dark = "hard"
 
 let mapleader=" "
-" inoremap ii <ESC><ESC>:w<CR>
 inoremap ii <ESC><ESC>:w<CR>
 vnoremap ii <ESC><ESC>
 nnoremap <Leader>w :w<CR>
-" nnoremap <Leader>q :q<CR>
 nnoremap <Leader>rv :so $MYVIMRC<CR>
 nnoremap ; :
 nnoremap Y y$
 nnoremap o o<ESC>
 nnoremap O O<ESC>
-
-" Markers Autocomplete
-" In insert mode type a and the opening of the pair you wanna use, it will
-" create the closing pair and <++> outside the pair. When you finish typing,
-" just hit the leader key twice to jump to the mark outside the pair and
-" delete the mark.
-" inoremap <Leader><Leader> <Esc>/<++><CR>"_c4l
-" inoremap a( ()<++><Esc>F)i
-" inoremap a{ {}<++><Esc>F}i
-" inoremap a{<CR> {<CR><CR>}<CR><++><Esc>2ki
-" inoremap a[ []<++><Esc>F]i
-" inoremap a< <><++><Esc>F>i
-" inoremap a' ''<++><Esc>F'i
-" inoremap a" ""<++><Esc>F"i
-" inoremap a` ``<++><Esc>F`i
-
-" Copy and paste from and to out of vim
-" vnoremap <C-c> "+y
-" map <C-v> "+P
 
 " Change word under the cursor and the next match with `.`
 nnoremap c* *``cgn
@@ -182,8 +160,8 @@ nnoremap <Leader><Leader>l <C-W><C-L>:call Splitresize()<CR>
 nnoremap <Leader><Leader>h <C-W><C-H>:call Splitresize()<CR>
 
 " Make splits
-" nnoremap <Leader>vs :<C-u>vsplit<CR>
-" nnoremap <Leader>s :<C-u>split<CR>
+nnoremap <Leader>vs :<C-u>vsplit<CR>
+nnoremap <Leader>s :<C-u>split<CR>
 
 " Keep your cursor centered while jumping through search results or joining
 " lines.
@@ -215,19 +193,13 @@ inoremap <C-j> <ESC>:m .+1<CR>==a
 vnoremap < <gv
 vnoremap > >gv
 
+" Auto line number toggle
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 augroup END
 
-augroup vimrc
-  au BufReadPre * setlocal foldmethod=indent
-  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
-augroup END
-
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
 
 """"""""""""""""""""""""
 " Plugins Config files "
