@@ -1,6 +1,7 @@
 let g:ale_linters = {
             \   'css': ['csslint'],
             \   'html': ['htmlhint'],
+            \   'javascript': ['eslint'],
             \}
 
 let g:ale_fixers = {

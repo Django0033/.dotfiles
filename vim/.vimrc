@@ -10,6 +10,7 @@
 " """""""""""
 syntax enable
 
+set nocompatible
 set number
 set mouse=a
 set numberwidth=1
@@ -94,6 +95,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     Plug 'jupyter-vim/jupyter-vim'
     Plug 'untitled-ai/jupyter_ascending.vim'
+    Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " colorscheme gruvbox
