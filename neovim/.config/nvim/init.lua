@@ -1,0 +1,5 @@
+require('settings')
+require('packer-config')
+require('colorschemes-config')
+require('plugins-config')
+require('mappings')
