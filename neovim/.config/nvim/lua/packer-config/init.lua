@@ -20,6 +20,7 @@ return require'packer'.startup(function()
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-telescope/telescope.nvim'
     use 'onsails/lspkind.nvim'
+    use 'renerocksai/telekasten.nvim'
     use 'romgrk/barbar.nvim'
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'tpope/vim-commentary'
@@ -43,4 +44,3 @@ return require'packer'.startup(function()
       end
     }
 end)
-
