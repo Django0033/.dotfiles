@@ -9,6 +9,7 @@ require('plugins-config.nvim-treesitter-config')
 require('plugins-config.indent-blankline-config')
 require('plugins-config.lua-ls')
 require('plugins-config.lsp-format-config')
+require('plugins-config.telekasten-config')
 
 -- luasnip setup
 local luasnip = require 'luasnip'
