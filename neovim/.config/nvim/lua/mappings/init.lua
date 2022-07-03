@@ -5,6 +5,7 @@ require('mappings.gitsigns-mappings')
 require('mappings.telescope-mappings')
 require('mappings.hop-mappings')
 require('mappings.neogit-mappings')
+require('mappings.telekasten-mappings')
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -23,8 +24,8 @@ map('n', 'c*', '*``cgn', opts)
 map('n', 'c#', '#``cgN', opts)
 
 -- Tab controls
-map('n', '<leader>t', ':tabe<CR>', opts)
-map('n', '<leader><TAB>', ':tabnext<CR>', opts)
+-- map('n', '<leader>t', ':tabe<CR>', opts)
+-- map('n', '<leader><TAB>', ':tabnext<CR>', opts)
 
 -- Buffer controls
 map('n', '<S-l>', ':bn<CR>', opts)
