@@ -54,6 +54,11 @@ cmp.setup {
         { name = 'luasnip' },
         { name = 'ultisnips' },
         { name = 'buffer' },
+        { name = 'path',
+            option = {
+                trailing_slash = false
+            },
+        },
     },
 }
 
@@ -69,12 +74,7 @@ cmp.setup.cmdline('/', {
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
-        { 
-            name = 'path',
-            option = {
-                trailing_slash = true
-            },
-    }
+        { name = 'path', }
     }, {
         { name = 'cmdline' }
     })
