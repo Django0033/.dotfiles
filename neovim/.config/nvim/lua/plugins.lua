@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
     use 'renerocksai/telekasten.nvim'
+    use 'renerocksai/calendar-vim'
     use 'ggandor/leap.nvim'
     -- use {
     --     'phaazon/hop.nvim',

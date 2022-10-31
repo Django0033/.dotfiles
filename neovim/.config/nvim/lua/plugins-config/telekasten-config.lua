@@ -165,6 +165,8 @@ wk.register({
         z = {'<cmd>lua require("telekasten").follow_link()<CR>', 'Follow Link'},
         b = {'<cmd>lua require("telekasten").show_backlinks()<CR>', 'Show Backlinks'},
         a = {'<cmd>lua require("telekasten").show_tags()<CR>', 'Show Tags'},
-        r = {'<cmd>lua require("telekasten").rename_note()<CR>', 'rename_note'},
+        r = {'<cmd>lua require("telekasten").rename_note()<CR>', 'Rename note'},
+        c = {'<cmd>lua require("telekasten").show_calendar()<CR>', 'Show calendar'},
+        t = {'<cmd>lua require("telekasten").toggle_todo()<CR>', 'Toggle todo'},
     },
 }, {prefix = '<leader>'})
