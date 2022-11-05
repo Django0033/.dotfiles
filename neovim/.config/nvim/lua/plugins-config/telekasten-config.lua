@@ -170,3 +170,10 @@ wk.register({
         t = {'<cmd>lua require("telekasten").toggle_todo()<CR>', 'Toggle todo'},
     },
 }, {prefix = '<leader>'})
+
+wk.register({
+    z = {
+        name = 'telekasten',
+        t = {'<cmd>\'<,\'>lua require("telekasten").toggle_todo()<CR>', 'Toggle todo'},
+    },
+}, {mode = 'v'})
