@@ -1,3 +1,9 @@
+#keyboard
+alias give-me-azerty-be="sudo localectl set-x11-keymap be"
+alias give-me-qwerty-us="sudo localectl set-x11-keymap us"
+alias give-me-dvorak-us="sudo localectl set-x11-keymap dvorak"
+alias give-me-qwerty-es="sudo localectl set-x11-keymap es"
+
 #shutdown or reboot
 alias sd='sudo shutdown'
 alias sdn='sudo shutdown now'
