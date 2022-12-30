@@ -35,7 +35,7 @@ set.timeoutlen = 1000                           -- Time to wait for a mapped seq
 set.undodir = '/home/django/.vim/undodir'
 set.undofile = true                             -- Enable persistent undo
 set.updatetime = 300                            -- Faster completion
-set.wrap = false                                -- Display lines as one long line
+set.wrap = true                                -- Display lines as one long line
 set.writebackup = false                         -- If a file is being edited by another program, it is not allowed to be edited
 
 require('plugins')
