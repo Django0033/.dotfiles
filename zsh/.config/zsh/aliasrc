@@ -28,6 +28,7 @@ alias yta='youtube-dl --add-metadata -xic --audio-format mp3 -o "%(title)s.%(ext
 alias nv='nvim'
 alias r='ranger'
 alias mkd='mkdir'
+alias tmux='tmux -u'
 
 # Aliases for software managment
 # pacman
