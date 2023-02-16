@@ -72,8 +72,10 @@ map('n', '<leader>q', ':bdel<CR>', opts)
 -- map('n', '<leader>bq', ":%bd\|e#\|bd#<CR>", opts)
 
 -- Split controls
-map('n', '<leader>vs', ':<C-u>vsplit<CR>', opts)
-map('n', '<leader>s', ':<C-u>split<CR>', opts)
+-- mcp('n', '<leader>vs', ':<C-u>vsplit<CR>', opts)
+-- map('n', '<leader>s', ':<C-u>split<CR>', opts)
+map('n', '<leader>vs', ':vnew<CR>', opts)
+map('n', '<leader>s', ':new<CR>', opts)
 map('n', '<C-l>', '<C-w>l', opts)
 map('n', '<C-h>', '<C-w>h', opts)
 map('n', '<C-j>', '<C-w>j', opts)
