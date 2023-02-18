@@ -21,6 +21,8 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
+  'tpope/vim-surround',
+  'tpope/vim-repeat',
 
   -- Git related plugins
   'tpope/vim-fugitive',
@@ -52,6 +54,12 @@ require('lazy').setup({
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   },
 
+  {
+    'tzachar/cmp-tabnine',
+    build='./install.sh',
+    -- requires = 'hrsh7th/nvim-cmp'
+  },
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
@@ -68,11 +76,19 @@ require('lazy').setup({
     },
   },
 
-  { -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+  -- { -- Theme inspired by Atom
+  --   'navarasu/onedark.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'onedark'
+  --   end,
+  -- },
+
+  {
+    'dracula/vim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'dracula'
     end,
   },
 
@@ -82,7 +98,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'dracula',
         component_separators = '|',
         section_separators = '',
       },
@@ -127,6 +143,28 @@ require('lazy').setup({
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   },
+
+  'mbbill/undotree',
+  'kyazdani42/nvim-web-devicons',
+  'ap/vim-css-color',
+  'renerocksai/telekasten.nvim',
+  'renerocksai/calendar-vim',
+  'ggandor/leap.nvim',
+  'RRethy/vim-illuminate',
+
+  { "anuvyklack/windows.nvim",
+     dependencies = {
+        "anuvyklack/middleclass",
+        "anuvyklack/animation.nvim"
+     },
+     config = function()
+        vim.o.winwidth = 10
+        vim.o.winminwidth = 10
+        vim.o.equalalways = false
+        require('windows').setup()
+     end
+  },
+
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
