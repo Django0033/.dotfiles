@@ -46,6 +46,10 @@ alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
 
+# Tldr alias for fzf with preview window
+alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
+# alias tldrf='tldr --list | fzf --preview "tldr {1}" --preview-window=right,70% | xargs tldr'
+
 #nano for important configuration files
 #know what you do in these files
 # alias nlxdm="sudo $EDITOR /etc/lxdm/lxdm.conf"
