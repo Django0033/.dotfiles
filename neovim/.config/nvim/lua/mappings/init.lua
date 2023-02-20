@@ -137,3 +137,11 @@ wk.register({
     },
 }, {mode = 'v'})
 -- [[]]
+
+-- [[ Lazy ]]
+map('n', '<leader>ls', ':Lazy sync<CR>', noremap)
+-- [[]]
+
+-- [[ Neogit ]]
+map('n', '<leader>gs', ':Neogit<CR>', opts)
+-- [[]]
