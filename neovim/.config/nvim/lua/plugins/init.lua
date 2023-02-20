@@ -2,7 +2,6 @@ return {
   'tpope/vim-surround',
   'tpope/vim-repeat',
   -- Git related plugins
-  'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
 
   -- Detect tabstop and shiftwidth automatically
@@ -16,5 +15,5 @@ return {
   'renerocksai/calendar-vim',
   'kyazdani42/nvim-web-devicons',
   'ap/vim-css-color',
-  'github/copilot.vim',
+  'TimUntersberger/neogit'
 }, {}
