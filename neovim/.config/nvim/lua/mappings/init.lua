@@ -81,62 +81,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
--- [[ Telescope ]]
--- See `:help telescope.builtin`
-map('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
-map('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
-map('n', '<leader>/', function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
-end, { desc = '[/] Fuzzily search in current buffer' })
-
-map('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
-map('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
-map('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
-map('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
-map('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
--- [[]]
-
--- [[ Treesitter ]]
--- Diagnostic keymaps
-map('n', '[d', vim.diagnostic.goto_prev)
-map('n', ']d', vim.diagnostic.goto_next)
-map('n', '<leader>e', vim.diagnostic.open_float)
--- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
--- [[]]
-
--- [[ Telekasten ]]
-map('i', '[[', '<cmd>:lua require("telekasten").insert_link({i=true})<CR>', opts)
-
-local wk = require('which-key')
-
-wk.register({
-    z = {
-        name = 'telekasten',
-        f = {'<cmd>lua require("telekasten").find_notes()<CR>', 'Find Notes'},
-        F = {'<cmd>lua require("telekasten").find_friends()<CR>', 'Find Friends'},
-        g = {'<cmd>lua require("telekasten").search_notes()<CR>', 'Grep through Notes'},
-        n = {'<cmd>lua require("telekasten").new_note()<CR>', 'New Note'},
-        N = {'<cmd>lua require("telekasten").new_templated_note()<CR>', 'New Templated Note'},
-        z = {'<cmd>lua require("telekasten").follow_link()<CR>', 'Follow Link'},
-        b = {'<cmd>lua require("telekasten").show_backlinks()<CR>', 'Show Backlinks'},
-        a = {'<cmd>lua require("telekasten").show_tags()<CR>', 'Show Tags'},
-        r = {'<cmd>lua require("telekasten").rename_note()<CR>', 'Rename note'},
-        c = {'<cmd>lua require("telekasten").show_calendar()<CR>', 'Show calendar'},
-        t = {'<cmd>lua require("telekasten").toggle_todo()<CR>', 'Toggle todo'},
-    },
-}, {prefix = '<leader>'})
-
-wk.register({
-    z = {
-        name = 'telekasten',
-        t = {'<cmd>\'<,\'>lua require("telekasten").toggle_todo()<CR>', 'Toggle todo'},
-    },
-}, {mode = 'v'})
--- [[]]
+require('mappings.telescope-mappings')
+require('mappings.treesitter-mappings')
+require('mappings.telekasten-mappings')
 
 -- [[ Lazy ]]
 map('n', '<leader>ls', ':Lazy sync<CR>', noremap)
@@ -144,4 +91,8 @@ map('n', '<leader>ls', ':Lazy sync<CR>', noremap)
 
 -- [[ Neogit ]]
 map('n', '<leader>gs', ':Neogit<CR>', opts)
+-- [[]]
+
+-- [[ nvim-tree ]]
+map('n', '<leader>nt', ':NvimTreeToggle<CR>', opts)
 -- [[]]
