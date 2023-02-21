@@ -15,5 +15,4 @@ return {
   'renerocksai/calendar-vim',
   'kyazdani42/nvim-web-devicons',
   'ap/vim-css-color',
-  'TimUntersberger/neogit'
 }, {}
