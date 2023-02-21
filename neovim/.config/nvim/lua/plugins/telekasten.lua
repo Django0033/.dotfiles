@@ -10,7 +10,7 @@ return {
     -- - NEVER use "C:\Users\myname" style paths
     -- - Using `vim.fn.expand("~/zettelkasten")` should work now but mileage will vary with anything outside of finding and opening files
     require('telekasten').setup({
-        home         = home,
+        home = home,
 
         -- if true, telekasten will be enabled when opening a note within the configured home
         take_over_my_home = true,
