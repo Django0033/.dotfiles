@@ -4,6 +4,9 @@ return {
     'nvim-tree/nvim-web-devicons', -- optional, for file icons
   },
   tag = 'nightly', -- optional, updated every week. (see issue #1193)
+  keys = {
+    {'<leader>nt', ':NvimTreeToggle<CR>'}
+  },
   config = function ()
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1

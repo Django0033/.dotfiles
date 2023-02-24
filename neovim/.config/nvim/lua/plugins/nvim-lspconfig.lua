@@ -15,7 +15,7 @@ return {
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
   },
-  config = function ()
+  config = function()
     -- LSP settings.
     --  This function gets run when an LSP connects to a particular buffer.
     local on_attach = function(_, bufnr)
@@ -72,7 +72,8 @@ return {
       -- pyright = {},
       -- rust_analyzer = {},
       -- tsserver = {},
-
+      html = {},
+      cssls = {},
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },

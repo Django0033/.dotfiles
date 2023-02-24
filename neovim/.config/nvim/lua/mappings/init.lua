@@ -81,18 +81,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-require('mappings.telescope-mappings')
 require('mappings.treesitter-mappings')
-require('mappings.telekasten-mappings')
 
 -- [[ Lazy ]]
 map('n', '<leader>ls', ':Lazy sync<CR>', noremap)
--- [[]]
-
--- [[ Neogit ]]
-map('n', '<leader>gs', ':Neogit<CR>', opts)
--- [[]]
-
--- [[ nvim-tree ]]
-map('n', '<leader>nt', ':NvimTreeToggle<CR>', opts)
 -- [[]]
