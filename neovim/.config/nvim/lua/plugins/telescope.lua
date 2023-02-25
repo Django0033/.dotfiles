@@ -29,6 +29,8 @@ return {
           i = {
             ['<C-u>'] = false,
             ['<C-d>'] = false,
+            ['<C-k>'] = require 'telescope.actions'.move_selection_previous,
+            ['<C-j>'] = require 'telescope.actions'.move_selection_next,
           },
         },
       },
