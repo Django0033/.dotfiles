@@ -72,6 +72,9 @@ return {
       -- pyright = {},
       -- rust_analyzer = {},
       -- tsserver = {},
+      marksman = {
+        require 'lspconfig'.marksman.setup {}
+      },
       html = {},
       cssls = {},
       lua_ls = {
