@@ -12,7 +12,7 @@ map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 
-map('i', 'ii', '<ESC><ESC>:w<CR>', opts)
+map('i', 'ii', '<ESC><ESC>', opts)
 map('v', 'ii', '<ESC><ESC>', opts)
 -- map('n', '<leader>w', ':w<CR>', opts)
 map('n', '<leader>rv', ':luafile %<CR>', opts)
