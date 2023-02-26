@@ -11,6 +11,7 @@ return {
     { '<leader>sw',      ':Telescope grep_string<CR>', desc = '[S]earch current [W]ord' },
     { '<leader>sg',      ':Telescope live_grep<CR>',   desc = '[S]earch by [G]rep' },
     { '<leader>sd',      ':Telescope diagnostics<CR>', desc = '[S]earch [D]iagnostics' },
+    { '<leader>fb',      ':Telescope file_browser<CR>', desc = 'File browser' },
   },
   init = function()
     vim.keymap.set('n', '<leader>/', function()
@@ -38,5 +39,6 @@ return {
 
     -- Enable telescope fzf native, if installed
     pcall(require('telescope').load_extension, 'fzf')
+    pcall(require('telescope').load_extension 'file_browser')
   end
 }
