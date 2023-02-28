@@ -15,6 +15,7 @@ return {
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
   },
+  priority = 1000,
   config = function()
     -- LSP settings.
     --  This function gets run when an LSP connects to a particular buffer.
@@ -73,7 +74,11 @@ return {
       -- rust_analyzer = {},
       -- tsserver = {},
       marksman = {
-        require 'lspconfig'.marksman.setup {}
+        name = 'marksman',
+        cmd = { 'marksman', 'server' },
+        filetypes = { 'markdown' },
+        root_dir = vim.fs.dirname(vim.fs.find({ '.git', 'marksman.toml' }, { upward = true })[1]),
+        single_file_support = true,
       },
       html = {},
       cssls = {},
