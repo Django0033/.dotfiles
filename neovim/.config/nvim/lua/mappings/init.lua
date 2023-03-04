@@ -44,6 +44,10 @@ map('n', '<leader>vs', ':vnew<CR>', opts)
 -- map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<leader>+', ':vertical resize +5<CR>', opts)
 map('n', '<leader>-', ':vertical resize -5<CR>', opts)
+map('n', '<leader>M', '<C-w>T', opts)
+map('n', '<leader>Rv', 'mAZZ<C-w>v`A', opts)
+map('n', '<leader>Rh', 'mAZZ<C-w>s`A', opts)
+
 
 -- Keep your cursor centered while jumping through search results or joining
 -- lines.
