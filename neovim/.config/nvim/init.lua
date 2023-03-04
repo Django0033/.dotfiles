@@ -32,5 +32,15 @@ if not status then
   return
 end
 
+-- local writer = vim.api.nvim_exec(
+--   [[
+--   function! Writer()
+--     setlocal spell spelllang=en,es
+--     setlocal formatoptions=t1
+--     setlocal textwidth=80
+--   endfunction
+--   ]], true
+-- )
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
