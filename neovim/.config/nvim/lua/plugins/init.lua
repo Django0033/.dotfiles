@@ -16,5 +16,6 @@ return {
       'renerocksai/calendar-vim',
       'nvim-tree/nvim-web-devicons',
       'ap/vim-css-color',
-      'nvim-telescope/telescope-hop.nvim'
+      'nvim-telescope/telescope-hop.nvim',
+      'ThePrimeagen/vim-be-good',
     }, {}
