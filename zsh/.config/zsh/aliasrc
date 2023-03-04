@@ -29,6 +29,7 @@ alias nv='nvim'
 alias r='ranger'
 alias mkd='mkdir'
 alias tmux='tmux -u'
+alias cl='clear'
 
 # Aliases for software managment
 # pacman
