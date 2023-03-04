@@ -32,15 +32,18 @@ if not status then
   return
 end
 
--- local writer = vim.api.nvim_exec(
---   [[
---   function! Writer()
---     setlocal spell spelllang=en,es
---     setlocal formatoptions=t1
---     setlocal textwidth=80
---   endfunction
---   ]], true
--- )
+-- [[ Write Mode ]]
+-- z= to correct words
+-- ]s to go to the next wrong word
+-- gq<CR> formats current line
+function Setup_spell()
+  vim.opt_local.spell = true
+  vim.opt_local.spelllang = 'en,es'
+  vim.opt_local.formatoptions:append('t1')
+  vim.opt_local.textwidth = 80
+end
+
+vim.api.nvim_create_user_command('SetupSpell', 'lua Setup_spell()', {})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
