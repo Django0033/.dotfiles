@@ -17,6 +17,7 @@ return {
         { '<leader>zc', ':Telekasten show_calendar<CR>',      desc = 'Show Calendar' },
         { '<leader>zt', ':Telekasten toggle_todo<CR>',        desc = 'Toggle todo' },
         { '<leader>zt', ':\'<,\'>Telekasten toggle_todo<CR>', desc = 'Toggle todo',       mode = 'v' },
+        { '[[',         '<cmd>Telekasten insert_link<CR>',    desc = 'Toggle todo',       mode = 'i' },
     },
     config = function()
         local home = vim.fn.expand("~/zettelkasten")
