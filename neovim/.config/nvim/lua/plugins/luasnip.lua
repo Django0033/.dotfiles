@@ -1,6 +1,6 @@
 return {
   'L3MON4D3/LuaSnip',
-  version = '<CurrentMajor>.*',
+  -- version = '<CurrentMajor>.*',
   config = function()
     local status, luasnip = pcall(require, 'luasnip')
     if not status then return end
