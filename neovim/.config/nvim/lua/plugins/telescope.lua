@@ -11,6 +11,8 @@ return {
     { '<leader>sw',      ':Telescope grep_string<CR>',  desc = '[S]earch current [W]ord' },
     { '<leader>sg',      ':Telescope live_grep<CR>',    desc = '[S]earch by [G]rep' },
     { '<leader>sd',      ':Telescope diagnostics<CR>',  desc = '[S]earch [D]iagnostics' },
+    { '<leader>ss',      ':Telescope spell_suggest',    desc = '[S]pell [S]uggest' },
+    { '<leader>sk',      ':Telescope keymaps',          desc = '[S]earch [K]eymaps' },
     { '<leader>fb',      ':Telescope file_browser<CR>', desc = 'File browser' },
   },
   init = function()
