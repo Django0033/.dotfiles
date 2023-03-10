@@ -46,7 +46,7 @@ return {
 
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-      nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+      nmap('<C-K>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
       -- Lesser used LSP functionality
       nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -62,9 +62,9 @@ return {
       end, { desc = 'Format current buffer with LSP' })
 
       vim.api.nvim_create_autocmd('BufWritePre', {
-        group = vim.api.nvim_create_augroup('LspFormatting', {clear = true}),
+        group = vim.api.nvim_create_augroup('LspFormatting', { clear = true }),
         buffer = bufnr,
-        callback = function ()
+        callback = function()
           vim.lsp.buf.format()
         end
       })
