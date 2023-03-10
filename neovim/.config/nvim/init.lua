@@ -1,9 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Install package manager
---    https://github.com/folke/lazy.nvim
---    `:help lazy.nvim.txt` for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
@@ -17,33 +14,38 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is where you install your plugins.
---  You can configure plugins using the `config` key.
---
---  You can also configure plugins after the setup call,
---    as they will be available in your neovim runtime.
 require('lazy').setup('plugins')
 require('settings')
 require('mappings')
 
-local status, _ = pcall(vim.cmd, 'colorscheme dracula')
-if not status then
+local ok, _ = pcall(vim.cmd, 'colorscheme dracula')
+if not ok then
   print('Colorscheme not found!')
   return
 end
 
--- [[ Write Mode ]]
--- z= to correct words
--- ]s to go to the next wrong word
--- gq<CR> formats current line
+--[[ Write Mode ]]
+--[[ z= to correct words
+]s to go to the next wrong word
+gq<CR> formats current line ]]
+local set = vim.opt_local
 function Setup_spell()
-  vim.opt_local.spell = true
-  vim.opt_local.spelllang = 'en,es'
-  vim.opt_local.formatoptions:append('t1')
-  vim.opt_local.textwidth = 80
+  set.spell = true
+  set.spelllang = 'en,es'
+  set.formatoptions:append('t1')
+  set.textwidth = 80
 end
 
-vim.api.nvim_create_user_command('SetupSpell', 'lua Setup_spell()', {})
+local createUserCommand = vim.api.nvim_create_user_command
+createUserCommand('SetupSpell', 'lua Setup_spell()', {})
+
+local createAutocommand = vim.api.nvim_create_autocmd
+local whenBufEnter = {'BufEnter', 'BufWinEnter'}
+local isMarkdown = '*.md'
+createAutocommand(whenBufEnter, {
+  pattern = { isMarkdown },
+  command = 'SetupSpell'
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
