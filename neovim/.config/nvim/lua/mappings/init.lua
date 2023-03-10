@@ -37,7 +37,7 @@ map('n', '<leader>q', ':bdel<CR>', opts)
 
 -- Split controls
 map('n', '<leader>vs', ':vnew<CR>', opts)
--- map('n', '<leader>s', ':<C-u>split<CR>', opts)
+map('n', '<leader>hs', ':<C-u>split<CR>', opts)
 -- map('n', '<C-l>', '<C-w>l', opts)
 -- map('n', '<C-h>', '<C-w>h', opts)
 -- map('n', '<C-j>', '<C-w>j', opts)

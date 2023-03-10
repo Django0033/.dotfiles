@@ -18,4 +18,6 @@ return {
       'ap/vim-css-color',
       'nvim-telescope/telescope-hop.nvim',
       'ThePrimeagen/vim-be-good',
+      'rafamadriz/friendly-snippets',
+      'dhruvasagar/vim-table-mode'
     }, {}
