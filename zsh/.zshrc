@@ -79,8 +79,6 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source ~/.config/zsh/plugins/autosugestions.plugin.zsh
 source ~/.config/zsh/plugins/dirhistory.plugin.zsh
-# Themes
-# source ~/.config/zsh/themes/agnoster.zsh-theme
 
 setopt autocd
 
