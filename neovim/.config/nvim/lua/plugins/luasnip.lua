@@ -29,7 +29,7 @@ return {
     luasnip.add_snippets(
       'lua', {
       snippet('pcall', format('pcall({}, {})', { insert_node(1, 'func'), insert_node(2, 'str') })),
-      snippet('pcall_require', format('local ok, {} = pcall(require, \'{}\')\nif not ok then return end', { insert_node(1, 'plugin'), rep(1) })),
+      snippet('pcall_require', format('local ok, {} = pcall(require, \'{}\')\nif not ok then\n  return\nend', { insert_node(1, 'variableName'), insert_node(2, 'plugin') })),
       snippet('local', format('local {} = {}', { insert_node(1, 'variableName'), insert_node(2, ' variableDefinition') })),
     }
     )
