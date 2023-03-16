@@ -40,7 +40,7 @@ local createUserCommand = vim.api.nvim_create_user_command
 createUserCommand('SetupSpell', 'lua Setup_spell()', {})
 
 local createAutocommand = vim.api.nvim_create_autocmd
-local whenBufEnter = {'BufEnter', 'BufWinEnter'}
+local whenBufEnter = { 'BufEnter', 'BufWinEnter' }
 local isMarkdown = '*.md'
 createAutocommand(whenBufEnter, {
   pattern = { isMarkdown },
