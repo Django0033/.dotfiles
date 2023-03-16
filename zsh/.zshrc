@@ -96,3 +96,4 @@ fi
 
 # Starship
 eval "$(starship init zsh)"
+export OPENAI_API_KEY='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'
