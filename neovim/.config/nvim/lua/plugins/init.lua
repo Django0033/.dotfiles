@@ -14,5 +14,6 @@ return {
       'nvim-telescope/telescope-hop.nvim',
       'ThePrimeagen/vim-be-good',
       'rafamadriz/friendly-snippets',
-      'dhruvasagar/vim-table-mode'
+      'dhruvasagar/vim-table-mode',
+      'chrisbra/csv.vim',
     }, {}
