@@ -33,5 +33,7 @@ return {
       snippet('local', format('local {} = {}', { insert_node(1, 'variableName'), insert_node(2, ' variableDefinition') })),
     }
     )
+    -- require('snippets')
+    -- TODO: create independent files for each language
   end
 }
