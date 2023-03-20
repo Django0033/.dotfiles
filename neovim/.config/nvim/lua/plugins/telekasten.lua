@@ -14,7 +14,6 @@ return {
         { '<leader>zb', ':Telekasten show_backlinks<CR>',     desc = 'Show Backlinks' },
         { '<leader>za', ':Telekasten show_tags<CR>',          desc = 'Show Tags' },
         { '<leader>zr', ':Telekasten rename_note<CR>',        desc = 'Rename note' },
-        { '<leader>zc', ':Telekasten show_calendar<CR>',      desc = 'Show Calendar' },
         { '<leader>zt', ':Telekasten toggle_todo<CR>',        desc = 'Toggle todo' },
         { '<leader>zt', ':\'<,\'>Telekasten toggle_todo<CR>', desc = 'Toggle todo',       mode = 'v' },
         { '[[',         '<cmd>Telekasten insert_link<CR>',    desc = 'Toggle todo',       mode = 'i' },
