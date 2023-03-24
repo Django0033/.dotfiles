@@ -3,19 +3,35 @@ return {
   'nvim-telescope/telescope.nvim',
   version = '*',
   dependencies = { 'nvim-lua/plenary.nvim' },
-  keys = {
-    { '<leader>?',       ':Telescope oldfiles<CR>',      desc = '[?] Find recently opened files' },
-    { '<leader><space>', ':Telescope buffers<CR>',       desc = '[ ] Find existing buffers' },
-    { '<leader>sf',      ':Telescope find_files<CR>',    desc = '[S]earch [F]iles' },
-    { '<leader>sh',      ':Telescope help_tags<CR>',     desc = '[S]earch [H]elp' },
-    { '<leader>sw',      ':Telescope grep_string<CR>',   desc = '[S]earch current [W]ord' },
-    { '<leader>sg',      ':Telescope live_grep<CR>',     desc = '[S]earch by [G]rep' },
-    { '<leader>sd',      ':Telescope diagnostics<CR>',   desc = '[S]earch [D]iagnostics' },
-    { '<leader>ss',      ':Telescope spell_suggest<CR>', desc = '[S]pell [S]uggest' },
-    { '<leader>sk',      ':Telescope keymaps<CR>',       desc = '[S]earch [K]eymaps' },
-    { '<leader>fb',      ':Telescope file_browser<CR>',  desc = 'File browser' },
-  },
+  lazy = true,
   init = function()
+    local ok, which_key = pcall(require, 'which-key')
+    if not ok then
+      return
+    end
+
+    which_key.register({
+      t = {
+        name = 'Telescope',
+        o = { '<cmd>lua require("telescope.builtin").oldfiles()<CR>', '[O]ldfiles' },
+        b = { '<cmd>lua require("telescope.builtin").buffer()<CR>', '[B]uffers' },
+        f = { '<cmd>lua require("telescope.builtin").find_files()<CR>', '[F]ind File' },
+        h = { '<cmd>lua require("telescope.builtin").help_tags()<CR>', '[H]elp Tags' },
+        g = { '<cmd>lua require("telescope.builtin").grep_string()<CR>', '[G]rep String' },
+        l = { '<cmd>lua require("telescope.builtin").live_grep()<CR>', '[L]ive Grep' },
+        d = { '<cmd>lua require("telescope.builtin").diagnostics()<CR>', '[D]iagnostics' },
+        s = { '<cmd>lua require("telescope.builtin").spell_suggest()<CR>', '[S]pell Suggest' },
+        k = { '<cmd>lua require("telescope.builtin").keymaps()<CR>', '[K]eymaps' },
+        F = { function()
+          local ok, _ = pcall(require('telescope').load_extension, 'file_browser')
+          if not ok then
+            return
+          end
+          vim.cmd [[Telescope file_browser]]
+        end, '[F]ile Browser' },
+      }
+    }, { prefix = '<leader>' })
+
     vim.keymap.set('n', '<leader>/', function()
       require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
@@ -24,8 +40,6 @@ return {
     end, { desc = '[/] Fuzzily search in current buffer' })
   end,
   config = function()
-    -- [[ Configure Telescope ]]
-    -- See `:help telescope` and `:help telescope.setup()`
     require('telescope').setup {
       defaults = {
         mappings = {
@@ -64,7 +78,7 @@ return {
 
     -- Enable telescope fzf native, if installed
     pcall(require('telescope').load_extension, 'fzf')
-    pcall(require('telescope').load_extension 'file_browser')
-    pcall(require('telescope').load_extension 'hop')
+    -- pcall(require('telescope').load_extension, 'file_browser')
+    pcall(require('telescope').load_extension, 'hop')
   end
 }
