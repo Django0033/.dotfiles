@@ -18,7 +18,7 @@ require('lazy').setup('plugins')
 require('settings')
 require('mappings')
 
-local ok, _ = pcall(vim.cmd, 'colorscheme dracula')
+local ok, _ = pcall(vim.cmd, 'colorscheme synthwave84')
 if not ok then
   print('Colorscheme not found!')
   return
