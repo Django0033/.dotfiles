@@ -14,7 +14,7 @@ return {
       t = {
         name = 'Telescope',
         o = { '<cmd>lua require("telescope.builtin").oldfiles()<CR>', '[O]ldfiles' },
-        b = { '<cmd>lua require("telescope.builtin").buffer()<CR>', '[B]uffers' },
+        b = { '<cmd>lua require("telescope.builtin").buffers()<CR>', '[B]uffers' },
         f = { '<cmd>lua require("telescope.builtin").find_files()<CR>', '[F]ind File' },
         h = { '<cmd>lua require("telescope.builtin").help_tags()<CR>', '[H]elp Tags' },
         g = { '<cmd>lua require("telescope.builtin").grep_string()<CR>', '[G]rep String' },
