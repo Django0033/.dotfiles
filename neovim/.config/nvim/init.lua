@@ -14,11 +14,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup('plugins')
 require('settings')
+require('lazy').setup('plugins')
 require('mappings')
 
-local ok, _ = pcall(vim.cmd, 'colorscheme synthwave84')
+local ok, _ = pcall(vim.cmd, 'colorscheme dracula')
 if not ok then
   print('Colorscheme not found!')
   return
