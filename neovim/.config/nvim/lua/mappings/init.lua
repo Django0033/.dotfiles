@@ -26,8 +26,8 @@ map('n', 'c*', '*``cgn', opts)
 map('n', 'c#', '#``cgN', opts)
 
 -- Tab controls
-map('n', '<leader>t', ':tabe<CR>', opts)
-map('n', '<leader><TAB>', ':tabnext<CR>', opts)
+map('n', '<leader><TAB>t', ':tabe<CR>', opts)
+map('n', '<leader><TAB>n', ':tabnext<CR>', opts)
 
 -- Buffer controls
 map('n', '<S-l>', ':bn<CR>', opts)
@@ -88,7 +88,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-require('mappings.treesitter-mappings')
+require('mappings.treesitter')
+-- require('mappings.telescope')
 
 -- [[ Lazy ]]
 map('n', '<leader>ls', ':Lazy sync<CR>', noremap)
