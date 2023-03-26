@@ -3,6 +3,7 @@ return {
   dependencies = {
     'godlygeek/tabular',
   },
+  ft = 'markdown',
   config = function()
     local status, vim_markdown = pcall(require, 'vim-markdown')
     if not status then return end

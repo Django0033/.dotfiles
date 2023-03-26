@@ -5,12 +5,10 @@ return {
 
       -- Detect tabstop and shiftwidth automatically
       'tpope/vim-sleuth',
-      { 'folke/which-key.nvim',  opts = {} },
-      'nvim-tree/nvim-web-devicons',
+      { 'folke/which-key.nvim',        opts = {} },
+      { 'nvim-tree/nvim-web-devicons', lazy = true },
       'ap/vim-css-color',
-      'nvim-telescope/telescope-hop.nvim',
       'ThePrimeagen/vim-be-good',
-      'rafamadriz/friendly-snippets',
       'dhruvasagar/vim-table-mode',
-      'chrisbra/csv.vim',
+      { 'chrisbra/csv.vim', ft = 'csv' },
     }, {}

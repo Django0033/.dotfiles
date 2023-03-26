@@ -1,7 +1,7 @@
 return {
   {
     'dracula/vim',
-    name = 'dracula'
+    name = 'dracula',
   },
   {
     'lunarvim/synthwave84.nvim',

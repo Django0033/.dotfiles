@@ -1,5 +1,6 @@
 return {
   'rcarriga/nvim-dap-ui',
+  lazy = true,
   config = function()
     local ok, dapUI = pcall(require, 'dapui')
     if not ok then

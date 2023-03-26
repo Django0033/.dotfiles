@@ -1,5 +1,6 @@
 return {
   'windwp/nvim-autopairs',
+  event = { 'BufReadPost', 'BufNewFile' },
   config = function()
     local status, autopairs = pcall(require, 'nvim-autopairs')
     if not status then return end

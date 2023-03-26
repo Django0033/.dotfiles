@@ -4,6 +4,7 @@ return {
     'mfussenegger/nvim-dap-python',
     'theHamsta/nvim-dap-virtual-text',
     'nvim-telescope/telescope-dap.nvim',
+    'rcarriga/nvim-dap-ui',
   },
   keys = {
     { '<F5>',       ':lua require\'dap\'.continue()<CR>',                                               desc = 'Continue' },

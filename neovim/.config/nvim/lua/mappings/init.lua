@@ -36,8 +36,17 @@ map('n', '<leader>q', ':bdel<CR>', opts)
 -- map('n', '<leader>bq', ":%bd\|e#\|bd#<CR>", opts)
 
 -- Split controls
-map('n', '<leader>vs', ':vnew<CR>', opts)
-map('n', '<leader>hs', ':<C-u>split<CR>', opts)
+-- map('n', '<leader>vs', ':vnew<CR>', opts)
+map('n', '<leader>vs', function()
+  require('windows')
+  vim.cmd [[vnew]]
+end, opts)
+-- map('n', '<leader>hs', ':<C-u>split<CR>', opts)
+map('n', '<leader>hs', function()
+  require('windows')
+  vim.cmd [[split]]
+  vim.cmd [[enew]]
+end, opts)
 -- map('n', '<C-l>', '<C-w>l', opts)
 -- map('n', '<C-h>', '<C-w>h', opts)
 -- map('n', '<C-j>', '<C-w>j', opts)
@@ -87,9 +96,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-
-require('mappings.treesitter')
--- require('mappings.telescope')
 
 -- [[ Lazy ]]
 map('n', '<leader>ls', ':Lazy sync<CR>', noremap)

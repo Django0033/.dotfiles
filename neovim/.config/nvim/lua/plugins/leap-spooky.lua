@@ -1,8 +1,6 @@
 return {
   'ggandor/leap-spooky.nvim',
-  dependencies = {
-    'ggandor/leap.nvim',
-  },
+  lazy = true,
   config = function()
     local ok, leap_spooky = pcall(require, 'leap-spooky')
     if not ok then

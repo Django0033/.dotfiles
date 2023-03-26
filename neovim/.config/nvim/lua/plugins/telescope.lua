@@ -2,7 +2,11 @@ return {
   -- Fuzzy Finder (files, lsp, etc)
   'nvim-telescope/telescope.nvim',
   version = '*',
-  dependencies = { 'nvim-lua/plenary.nvim' },
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope-fzf-native.nvim',
+      'nvim-telescope/telescope-hop.nvim',
+  },
   lazy = true,
   init = function()
     local ok, which_key = pcall(require, 'which-key')

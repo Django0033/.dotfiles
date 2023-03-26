@@ -1,5 +1,8 @@
 return {
   'ggandor/leap.nvim',
+  dependencies = {
+    'ggandor/leap-spooky.nvim',
+  },
   keys = {
     { 's',  mode = { 'n', 'x', 'o' }, desc = 'Leap forward to' },
     { 'S',  mode = { 'n', 'x', 'o' }, desc = 'Leap backward to' },
