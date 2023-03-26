@@ -4,15 +4,12 @@ return {
    dependencies = {
      'nvim-treesitter/nvim-treesitter-textobjects',
    },
+  event = { "BufReadPost", "BufNewFile" },
    config = function()
      pcall(require('nvim-treesitter.install').update { with_sync = true })
-    -- [[ Configure Treesitter ]]
-    -- See `:help nvim-treesitter`
     require('nvim-treesitter.configs').setup {
-      -- Add languages to be installed here that you want installed for treesitter
       ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'help', 'vim' },
 
-      -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
       auto_install = false,
 
       highlight = { enable = true },
@@ -71,5 +68,11 @@ return {
         },
       },
     }
+    local map = vim.keymap.set
+
+    map('n', '[d', vim.diagnostic.goto_prev)
+    map('n', ']d', vim.diagnostic.goto_next)
+    map('n', '<leader>e', vim.diagnostic.open_float)
+    vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist)
    end,
 }
