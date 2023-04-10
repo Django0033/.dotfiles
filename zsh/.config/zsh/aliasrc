@@ -22,8 +22,8 @@ alias gc='git commit -m'
 alias gp='git push'
 
 #youtube download
-alias yt='youtube-dl --add-metadata -ic -o "%(title)s.%(ext)s"'
-alias yta='youtube-dl --add-metadata -xic --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias yt='yt-dlp --add-metadata -ic -o "%(title)s.%(ext)s"'
+alias yta='yt-dlp --add-metadata -xic --audio-format mp3 -o "%(title)s.%(ext)s"'
 
 alias nv='nvim'
 alias r='ranger'
