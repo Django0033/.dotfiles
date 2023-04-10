@@ -66,7 +66,8 @@ config.set("content.cookies.accept", "all", "devtools://*")
 # Value to send in the `Accept-Language` header. Note that the value
 # read from JavaScript is always the global value.
 # Type: String
-config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io/*")
+config.set("content.headers.accept_language",
+           "", "https://matchmaker.krunker.io/*")
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -208,13 +209,13 @@ c.url.start_pages = "https://www.google.com"
 # `colors.webpage.darkmode.threshold.background` to 205.  - "With
 # selective inversion of everything": Combines the two variants   above.
 # Type: Bool
-c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = True
 
 # Bindings for normal mode
-config.bind("M", "hint links spawn mpv {hint-url}")
+config.bind("M", "hint links spawn cvlc {hint-url}")
 config.bind(
     "Z",
-    'hint links spawn st -e youtube-dl --add-metadata -ic -o "%(title)s.%(ext)s" {hint-url}',
+    'hint links spawn alacritty -e yt-dlp --add-metadata -ic -o "%(title)s.%(ext)s" {hint-url}',
 )
 config.bind("xb", "config-cycle statusbar.show never always")
 config.bind("xt", "config-cycle tabs.show never always")
