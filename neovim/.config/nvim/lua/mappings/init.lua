@@ -101,6 +101,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- [[ Lazy ]]
-map('n', '<leader>lz', ':Lazy sync<CR>', { noremap = true, desc = 'Lazy' })
+map('n', '<leader>lz', ':Lazy<CR>', { noremap = true, desc = 'Lazy' })
 map('n', '<leader>ls', ':Lazy sync<CR>', { noremap = true, desc = 'Lazy Sync' })
 -- [[]]
