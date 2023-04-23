@@ -21,4 +21,23 @@ return {
   {
     'folke/tokyonight.nvim',
   },
+  {
+    'sainnhe/gruvbox-material',
+    name = 'gruvbox',
+    config = function()
+      if vim.o.termguicolors then
+        vim.o.termguicolors = true
+      end
+
+      vim.o.background = 'dark'
+
+      vim.g.gruvbox_material_background = 'hard'
+      vim.g.gruvbox_material_foreground = 'original'
+      vim.g.gruvbox_material_better_performance = 1
+
+      vim.cmd('colorscheme gruvbox-material')
+
+      vim.g.lightline = { colorscheme = 'gruvbox_material' }
+    end
+  },
 }
