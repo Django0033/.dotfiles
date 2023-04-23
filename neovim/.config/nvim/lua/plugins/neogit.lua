@@ -6,7 +6,7 @@ return {
   },
   -- lazy = true,
   keys = {
-    {'<leader>gs', ':Neogit<CR>'}
+    {'<leader>gs', ':Neogit<CR>', desc = 'Git Status'}
   },
   config = function ()
     require('neogit').setup {
