@@ -5,10 +5,6 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   event = 'VeryLazy',
-  keys = {
-    { '<leader>bp', '<cmd>BufferLineTogglePin<CR>',            desc = 'Toggle Pin' },
-    { '<leader>bP', '<cmd>BufferLineGroupClose ungrouped<CR>', desc = 'Delete non-pinned buffers' },
-  },
   config = function()
     local status, bufferline = pcall(require, 'bufferline')
     if not status then
