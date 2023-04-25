@@ -30,10 +30,10 @@ return {
       dashboard.button('e', '  > New File', ':ene<CR>'),
       dashboard.button('f', '  > Search Files', '<cmd>lua require("telescope.builtin").find_files()<CR>'),
       dashboard.button('?', '  > Recent Files', '<cmd>lua require("telescope.builtin").oldfiles()<CR>'),
-      dashboard.button('g', '  >  Find text', ':<cmd>lua require("telescope.builtin").live_grep()<CR>'),
-      dashboard.button('c', '  >  Config', '<cmd>e $MYVIMRC <CR>'),
-      dashboard.button('l', '󰒲  >  Lazy', '<cmd>Lazy<CR>'),
-      dashboard.button('q', '  >  Quit', '<cmd>qa<CR>'),
+      dashboard.button('g', '  > Find text', ':<cmd>lua require("telescope.builtin").live_grep()<CR>'),
+      dashboard.button('c', '  > Config', '<cmd>e $MYVIMRC <CR>'),
+      dashboard.button('l', '󰒲  > Lazy', '<cmd>Lazy<CR>'),
+      dashboard.button('q', '  > Quit', '<cmd>qa<CR>'),
     }
   end
 }
