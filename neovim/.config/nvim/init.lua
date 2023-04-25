@@ -18,11 +18,11 @@ require('settings')
 require('lazy').setup('plugins')
 require('mappings')
 
-local ok, _ = pcall(vim.cmd, 'colorscheme gruvbox-material')
-if not ok then
-  print('Colorscheme not found!')
-  return
-end
+-- local ok, _ = pcall(vim.cmd, 'colorscheme gruvbox-material')
+-- if not ok then
+--   print('Colorscheme not found!')
+--   return
+-- end
 
 --[[ Write Mode ]]
 --[[ z= to correct words
@@ -47,7 +47,7 @@ createAutocommand(whenBufEnter, {
   command = 'SetupSpell'
 })
 
-vim.g.markdown_fenced_languages = {'python'}
+vim.g.markdown_fenced_languages = { 'python' }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
