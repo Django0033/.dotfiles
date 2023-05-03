@@ -80,7 +80,7 @@ return {
                 -- calendar week display mode: 1 .. 'WK01', 2 .. 'WK 1', 3 .. 'KW01', 4 .. 'KW 1', 5 .. '1'
                 weeknm = 4,
                 -- use monday as first day of week: 1 .. true, 0 .. false
-                calendar_monday = 1,
+                calendar_monday = 0,
                 -- calendar mark: where to put mark for marked days: 'left', 'right', 'left-fit'
                 calendar_mark = 'left-fit',
             },
@@ -88,12 +88,12 @@ return {
             close_after_yanking         = false,
             insert_after_inserting      = true,
             -- tag notation: '#tag', ':tag:', 'yaml-bare'
-            tag_notation                = "#tag",
+            tag_notation                = "yaml-bare",
             -- command palette theme: dropdown (window) or ivy (bottom panel)
-            command_palette_theme       = "ivy",
+            command_palette_theme       = "dropdown",
             -- tag list theme:
             -- get_cursor: small tag list at cursor; ivy and dropdown like above
-            show_tags_theme             = "ivy",
+            show_tags_theme             = "dropdown",
             -- when linking to a note in subdir/, create a [[subdir/title]] link
             -- instead of a [[title only]] link
             subdirs_in_links            = true,
