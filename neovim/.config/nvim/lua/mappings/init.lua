@@ -31,17 +31,17 @@ map('n', '<leader>bd', ':bdel<CR>', { noremap = true, silent = true, desc = 'Buf
 map('n', '<leader>bD', function()
   vim.cmd [[%bd|e#|bd#]]
 end, { noremap = true, silent = true, desc = 'Buffer Delete Others' })
-map('n', '<leader>bsv', function()
+map('n', '<leader>bv', function()
   require('windows')
   vim.cmd [[vnew]]
 end, { noremap = true, silent = true, desc = 'Buffer Split Vertical' })
-map('n', '<leader>bsh', function()
+map('n', '<leader>bh', function()
   require('windows')
   vim.cmd [[split]]
   vim.cmd [[enew]]
 end, { noremap = true, silent = true, desc = 'Buffer Split Horizontal' })
-map('n', '<leader>bs+', ':vertical resize +5<CR>', { noremap = true, silent = true, desc = 'Buffer Split +5' })
-map('n', '<leader>bs-', ':vertical resize -5<CR>', { noremap = true, silent = true, desc = 'Buffer Split -5' })
+map('n', '<leader>b+', ':vertical resize +5<CR>', { noremap = true, silent = true, desc = 'Buffer Split +5' })
+map('n', '<leader>b-', ':vertical resize -5<CR>', { noremap = true, silent = true, desc = 'Buffer Split -5' })
 
 
 -- map('i', 'ii', '<ESC><ESC>', opts)
