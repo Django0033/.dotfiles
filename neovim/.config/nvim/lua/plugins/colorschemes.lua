@@ -51,5 +51,11 @@ return {
     config = function()
       -- vim.cmd('colorscheme onedark_dark')
     end
+  },
+  {
+    'nyngwang/nvimgelion',
+    config = function()
+      vim.cmd('colorscheme nvimgelion')
+    end
   }
 }
