@@ -6,7 +6,7 @@ return {
     defaults = {
       mode = { 'n', 'v' },
       ['<leader><tab>'] = { name = 'Tabs' },
-      ['<leader>b'] = { name = 'Buffer', s = { name = 'Split' } },
+      ['<leader>b'] = { name = 'Buffer' },
       ['<leader>z'] = { name = 'Telekasten' },
       ['<leader>s'] = { name = 'Spectre' },
       ['<leader>d'] = { name = 'DAP' },

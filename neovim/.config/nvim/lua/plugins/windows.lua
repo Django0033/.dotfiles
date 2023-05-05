@@ -5,8 +5,9 @@ return {
     "anuvyklack/animation.nvim"
   },
   keys = {
-    { '<leader>vs' },
-    { '<leader>hs' },
+    { '<leader>bz', '<cmd>WindowsMaximize<CR>', desc = 'Buffer Maximize' },
+    { '<leader>b=', '<cmd>WindowsEqualize<CR>', desc = 'Buffer Equalize' },
+    { '<leader>bt', '<cmd>WindowsToggleAutowidth<CR>', desc = 'Toggle Autowidth' },
   },
   config = function()
     vim.o.winwidth = 10
