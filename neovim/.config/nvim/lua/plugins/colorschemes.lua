@@ -35,7 +35,7 @@ return {
       vim.g.gruvbox_material_foreground = 'original'
       vim.g.gruvbox_material_better_performance = 1
 
-      vim.cmd('colorscheme gruvbox-material')
+      -- vim.cmd('colorscheme gruvbox-material')
 
       -- vim.g.lightline = { colorscheme = 'gruvbox_material' }
     end
@@ -50,6 +50,12 @@ return {
     'olimorris/onedarkpro.nvim',
     config = function()
       -- vim.cmd('colorscheme onedark_dark')
+    end
+  },
+  {
+    'nyngwang/nvimgelion',
+    config = function()
+      vim.cmd('colorscheme nvimgelion')
     end
   }
 }
