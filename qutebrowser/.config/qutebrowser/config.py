@@ -209,7 +209,7 @@ c.url.start_pages = "https://www.google.com"
 # `colors.webpage.darkmode.threshold.background` to 205.  - "With
 # selective inversion of everything": Combines the two variants   above.
 # Type: Bool
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.enabled = False
 
 # Bindings for normal mode
 config.bind("M", "hint links spawn cvlc {hint-url}")
