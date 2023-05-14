@@ -82,8 +82,6 @@ source ~/.config/zsh/plugins/dirhistory.plugin.zsh
 
 setopt autocd
 
-# neofetch
-# colorscript -r
 fm6000 -r -c random
 
 if type 'xmodmap' &> /dev/null; then
