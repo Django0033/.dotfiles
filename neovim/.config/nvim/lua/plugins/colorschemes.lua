@@ -2,6 +2,9 @@ return {
   {
     'dracula/vim',
     name = 'dracula',
+    config = function()
+      vim.cmd('colorscheme dracula')
+    end
   },
   {
     'lunarvim/synthwave84.nvim',
@@ -35,7 +38,7 @@ return {
       vim.g.gruvbox_material_foreground = 'original'
       vim.g.gruvbox_material_better_performance = 1
 
-      vim.cmd('colorscheme gruvbox-material')
+      -- vim.cmd('colorscheme gruvbox-material')
 
       -- vim.g.lightline = { colorscheme = 'gruvbox_material' }
     end
