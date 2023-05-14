@@ -435,10 +435,10 @@ colors:
 #   - (Windows) powershell
 shell:
  program: /bin/zsh
- args:
-  - -l
-  - -c
-  - "tmux attach || tmux"
+ # args:
+ #  - -l
+ #  - -c
+ #  - "tmux attach || tmux"
 #    - --login
 
 # Startup directory
