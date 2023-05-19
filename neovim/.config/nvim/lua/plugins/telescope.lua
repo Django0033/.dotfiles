@@ -5,7 +5,8 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope-fzf-native.nvim',
-      'nvim-telescope/telescope-hop.nvim',
+    'nvim-telescope/telescope-hop.nvim',
+    'debugloop/telescope-undo.nvim',
   },
   lazy = true,
   init = function()
@@ -33,6 +34,13 @@ return {
           end
           vim.cmd [[Telescope file_browser]]
         end, '[F]ile Browser' },
+        u = { function()
+          local ok, _ = pcall(require('telescope').load_extension, 'undo')
+          if not ok then
+            return
+          end
+          vim.cmd [[Telescope undo]]
+        end, '[U]ndo Tree' },
       }
     }, { prefix = '<leader>' })
 
@@ -82,7 +90,6 @@ return {
 
     -- Enable telescope fzf native, if installed
     pcall(require('telescope').load_extension, 'fzf')
-    -- pcall(require('telescope').load_extension, 'file_browser')
     pcall(require('telescope').load_extension, 'hop')
   end
 }
