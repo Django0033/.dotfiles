@@ -50,6 +50,7 @@ alias pacman="sudo pacman --color auto"
 alias update="sudo pacman -Syyu"
 
 # paru as aur helper - updates everything
+alias ins="paru -S"
 alias pksyua="paru -Syu --noconfirm"
 alias upall="paru -Syu --noconfirm"
 
