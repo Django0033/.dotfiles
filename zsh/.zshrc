@@ -97,12 +97,13 @@ alias nvim-cosmic="NVIM_APPNAME=CosmicNvim nvim"
 alias nvim-doom="NVIM_APPNAME=doom-nvim nvim"
 alias nvim-kick="NVIM_APPNAME=kickstart nvim"
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-lunar="NVIM_APPNAME=LunarVim nvim"
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-vapour="NVIM_APPNAME=VapourNvim nvim"
 
 function nvims ()
 {
-  items=("default" "AstroNvim" "CosmicNvim" "doom-nvim" "kickstart " "LazyVim" "NvChad" "VapourNvim") 
+  items=("default" "AstroNvim" "CosmicNvim" "doom-nvim" "kickstart " "LazyVim" "LunarVim" "NvChad" "VapourNvim") 
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
