@@ -3,6 +3,9 @@ return {
     dependencies = {
         'nvim-telescope/telescope.nvim',
     },
+    cmd = {
+        'Telekasten'
+    },
     keys = {
         name = 'Telekasten',
         { '<leader>zf', ':Telekasten find_notes<CR>',         desc = 'Find Notes' },
@@ -18,6 +21,7 @@ return {
         { '<leader>zt', ':\'<,\'>Telekasten toggle_todo<CR>', desc = 'Toggle todo',       mode = 'v' },
         { '[[',         '<cmd>Telekasten insert_link<CR>',    desc = 'Toggle todo',       mode = 'i' },
         { '<leader>zd', ':Telekasten goto_today<CR>',         desc = 'Go to Today' },
+        { '<leader>zw', ':Telekasten goto_thisweek<CR>',      desc = 'Go to This Week' },
     },
     config = function()
         local home = vim.fn.expand("~/zettelkasten")
