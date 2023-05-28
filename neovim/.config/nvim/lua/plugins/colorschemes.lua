@@ -7,19 +7,16 @@ return {
     end
   },
   {
-    'lunarvim/synthwave84.nvim',
-    opts = {
-      glow = {
-        error_msg = true,
-        type2 = true,
-        func = true,
-        keyword = true,
-        operator = false,
-        buffer_current_target = true,
-        buffer_visible_target = true,
-        buffer_inactive_target = true,
-      }
-    }
+    'maxmx03/fluoromachine.nvim',
+    config = function()
+      -- local fm = require 'fluoromachine'
+
+      -- fm.setup {
+      --   glow = true,
+      --   theme = 'fluoromachine'
+      -- }
+      -- vim.cmd.colorscheme 'fluoromachine'
+    end,
   },
   {
     'folke/tokyonight.nvim',
