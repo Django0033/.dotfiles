@@ -20,5 +20,15 @@ return {
     local which_key = require('which-key')
     which_key.setup(opts)
     which_key.register(opts.defaults)
+
+    which_key.register({
+      filetype = { 'norg' },
+      ['<localleader>i'] = { name = 'Insert' },
+      ['<localleader>l'] = { name = 'List' },
+      ['<localleader>m'] = { name = 'Mode' },
+      ['<localleader>n'] = { name = 'New' },
+      ['<localleader>t'] = { name = 'TODO' },
+
+    })
   end
 }
