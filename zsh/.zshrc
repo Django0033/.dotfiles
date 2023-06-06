@@ -104,7 +104,7 @@ alias nvim-vapour="NVIM_APPNAME=VapourNvim nvim"
 function nvims ()
 {
   items=("default" "AstroNvim" "CosmicNvim" "doom-nvim" "kickstart " "LazyVim" "LunarVim" "NvChad" "VapourNvim") 
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config >> " --height=~50% --layout=reverse --border --exit-0)
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config >> " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
     return 0
