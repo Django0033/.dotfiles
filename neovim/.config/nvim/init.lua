@@ -39,13 +39,13 @@ end
 local createUserCommand = vim.api.nvim_create_user_command
 createUserCommand('SetupSpell', 'lua Setup_spell()', {})
 
-local createAutocommand = vim.api.nvim_create_autocmd
-local whenBufEnter = { 'BufEnter', 'BufWinEnter' }
-local isMarkdown = '*.md'
-createAutocommand(whenBufEnter, {
-  pattern = { isMarkdown },
-  command = 'SetupSpell'
-})
+-- local createAutocommand = vim.api.nvim_create_autocmd
+-- local whenBufEnter = { 'BufEnter', 'BufWinEnter' }
+-- local isMarkdown = '*.md'
+-- createAutocommand(whenBufEnter, {
+--   pattern = { isMarkdown },
+--   command = 'SetupSpell'
+-- })
 
 vim.g.markdown_fenced_languages = { 'python' }
 
