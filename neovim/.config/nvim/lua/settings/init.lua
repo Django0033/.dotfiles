@@ -49,7 +49,7 @@ set.undofile = true                       -- Creates an undofile
 set.undolevels = 10000                    --
 set.updatetime = 250                      --
 set.wildmode = "longest:full,full"        -- Command-line completion mode
-set.wrap = true                           -- Display lines as one long line
+set.wrap = false                          -- Display lines as one long line
 set.writebackup = false                   -- If a file is being edited by another program, it is not allowed to be edited
 
 if vim.fn.has("nvim-0.9.0") == 1 then
