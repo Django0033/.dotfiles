@@ -20,13 +20,14 @@ return {
         name = 'Telescope',
         o = { '<cmd>lua require("telescope.builtin").oldfiles()<CR>', '[O]ldfiles' },
         b = { '<cmd>lua require("telescope.builtin").buffers()<CR>', '[B]uffers' },
+        c = { '<cmd>lua require("telescope.builtin").colorscheme()<CR>', '[C]olorscheme' },
         f = { '<cmd>lua require("telescope.builtin").find_files()<CR>', '[F]ind File' },
         h = { '<cmd>lua require("telescope.builtin").help_tags()<CR>', '[H]elp Tags' },
         g = { '<cmd>lua require("telescope.builtin").grep_string()<CR>', '[G]rep String' },
+        k = { '<cmd>lua require("telescope.builtin").keymaps()<CR>', '[K]eymaps' },
         l = { '<cmd>lua require("telescope.builtin").live_grep()<CR>', '[L]ive Grep' },
         d = { '<cmd>lua require("telescope.builtin").diagnostics()<CR>', '[D]iagnostics' },
         s = { '<cmd>lua require("telescope.builtin").spell_suggest()<CR>', '[S]pell Suggest' },
-        k = { '<cmd>lua require("telescope.builtin").keymaps()<CR>', '[K]eymaps' },
         F = { function()
           local ok, _ = pcall(require('telescope').load_extension, 'file_browser')
           if not ok then
