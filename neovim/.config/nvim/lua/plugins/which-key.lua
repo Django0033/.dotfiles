@@ -13,6 +13,7 @@ return {
       ['<leader>g'] = { name = 'Git' },
       ['<leader>h'] = { name = 'Harpoon' },
       ['<leader>l'] = { name = 'Lazy' },
+      ['<leader>o'] = { name = 'Oil' },
       ['<leader>r'] = { name = 'Reload' },
     }
   },
