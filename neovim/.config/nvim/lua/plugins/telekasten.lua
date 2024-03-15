@@ -2,6 +2,7 @@ return {
     'renerocksai/telekasten.nvim',
     dependencies = {
         'nvim-telescope/telescope.nvim',
+        'nvim-lua/plenary.nvim',
     },
     cmd = {
         'Telekasten'

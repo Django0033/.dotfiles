@@ -13,7 +13,7 @@
 # Change the argument to True to still load settings configured via autoconfig.yml
 import dracula.draw
 
-config.load_autoconfig(False)
+config.load_autoconfig()
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
@@ -209,7 +209,7 @@ c.url.start_pages = "https://www.google.com"
 # `colors.webpage.darkmode.threshold.background` to 205.  - "With
 # selective inversion of everything": Combines the two variants   above.
 # Type: Bool
-c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = True
 
 # Bindings for normal mode
 config.bind("M", "hint links spawn cvlc {hint-url}")
@@ -223,11 +223,12 @@ config.bind(
     "xx",
     "config-cycle statusbar.show always never;; config-cycle tabs.show never always ",
 )
-
+config.bind("J", "tab-prev")
+config.bind("K", "tab-next")
 
 # Load existing settings made via :set
 config.load_autoconfig()
 
 dracula.draw.blood(c, {"spacing": {"vertical": 6, "horizontal": 8}})
 
-config.set("hints.chars", "aoeuidhtns")
+config.set("hints.chars", "aoeusnth")

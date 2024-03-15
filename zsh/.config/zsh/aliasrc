@@ -10,11 +10,6 @@ alias sdn='sudo shutdown now'
 alias rbn='sudo reboot now'
 
 #list
-# alias ls='ls --color=auto --group-directories-first'
-# alias ll='ls -l --color=auto --group-directories-first'
-# alias la='ls -a --color=auto --group-directories-first'
-# alias lla='ls -la --color=auto --group-directories-first'
-
 if command -v exa &> /dev/null; then
     alias ls='exa --icons --color=auto --group-directories-first'
     alias ll='exa -l --color=auto --group-directories-first'
@@ -64,25 +59,12 @@ alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pac
 alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 # alias tldrf='tldr --list | fzf --preview "tldr {1}" --preview-window=right,70% | xargs tldr'
 
-#nano for important configuration files
-#know what you do in these files
-# alias nlxdm="sudo $EDITOR /etc/lxdm/lxdm.conf"
-# alias nlightdm="sudo $EDITOR /etc/lightdm/lightdm.conf"
-# alias npacman="sudo $EDITOR /etc/pacman.conf"
-# alias ngrub="sudo $EDITOR /etc/default/grub"
-# alias nconfgrub="sudo $EDITOR /boot/grub/grub.cfg"
-# alias nmkinitcpio="sudo $EDITOR /etc/mkinitcpio.conf"
-# alias nmirrorlist="sudo $EDITOR /etc/pacman.d/mirrorlist"
-# alias narcomirrorlist="sudo $EDITOR /etc/pacman.d/arcolinux-mirrorlist"
-# alias nsddm="sudo $EDITOR /etc/sddm.conf"
-# alias nsddmk="sudo $EDITOR /etc/sddm.conf.d/kde_settings.conf"
-# alias nfstab="sudo $EDITOR /etc/fstab"
-# alias nnsswitch="sudo $EDITOR /etc/nsswitch.conf"
-# alias nsamba="sudo $EDITOR /etc/samba/smb.conf"
-# alias ngnupgconf="sudo $EDITOR /etc/pacman.d/gnupg/gpg.conf"
-# alias nhosts="sudo $EDITOR /etc/hosts"
-# alias nhostname="sudo $EDITOR /etc/hostname"
-# alias nb="$EDITOR ~/.bashrc"
 alias nz="nvim ~/.zshrc"
 # alias nf="$EDITOR ~/.config/fish/config.fish"
 # alias nneofetch="$EDITOR ~/.config/neofetch/config.conf"
+
+# RPG-CLI
+alias rpg='rpg-cli'
+alias rcd='rpg-cli cd'
+alias rls='rpg-cli ls'
+alias icat="kitty +kitten icat"

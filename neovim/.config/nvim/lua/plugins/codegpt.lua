@@ -1,8 +1,14 @@
 return {
-  "nvim-lua/plenary.nvim",
+  "dpayne/CodeGPT.nvim",
   dependencies = {
+    "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
-    "dpayne/CodeGPT.nvim",
   },
-  cmd = 'Chat',
+  -- cmd = 'Chat',
+  config = function()
+    local ok, codegpt = pcall(require, 'codegpt.config')
+    if not ok then
+      return
+    end
+  end
 }

@@ -4,10 +4,13 @@ return {
     'godlygeek/tabular',
   },
   ft = 'markdown',
+  opt = {},
   config = function()
-    local status, vim_markdown = pcall(require, 'vim-markdown')
-    if not status then return end
-    vim_markdown.setup {}
+    -- local ok, vim_markdown = pcall(require, 'vim-markdown')
+    -- if not ok then
+    --   return
+    -- end
+    -- vim_markdown.setup()
 
     local map = vim.keymap.set
     local opts = { noremap = true, silent = true }

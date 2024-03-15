@@ -10,6 +10,10 @@ return {
     require('nvim-treesitter.configs').setup {
       ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'help', 'vim', 'markdown' },
 
+      autotag = {
+        enable = true,
+      },
+
       auto_install = false,
 
       highlight = { enable = true },

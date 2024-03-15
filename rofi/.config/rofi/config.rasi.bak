@@ -1,11 +1,16 @@
 /*Dracula theme based on the Purple official rofi theme*/
-@import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
-    font: "Iosevka";
-    separatorcolor: @active-background;
-    bordercolor: @selected-urgent-background;
+    font: "Jetbrains Mono 12";
+    foreground: #be93f9;
+    background: #282a36;
+    active-background: #3d3f4b;
+    urgent-background: #ff5555;
     selected-background: @active-background;
+    selected-urgent-background: @urgent-background;
+    selected-active-background: @active-background;
+    separatorcolor: @active-background;
+    bordercolor: #ff79c6;
 }
 
 #window {

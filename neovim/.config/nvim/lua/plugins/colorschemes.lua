@@ -3,14 +3,13 @@ return {
     'dracula/vim',
     name = 'dracula',
     config = function()
-      vim.cmd('colorscheme dracula')
+      -- vim.cmd('colorscheme dracula')
     end
   },
   {
     'maxmx03/fluoromachine.nvim',
     config = function()
       -- local fm = require 'fluoromachine'
-
       -- fm.setup {
       --   glow = true,
       --   theme = 'fluoromachine'
@@ -55,7 +54,7 @@ return {
   {
     'nyngwang/nvimgelion',
     config = function()
-      -- vim.cmd('colorscheme nvimgelion')
+      vim.cmd('colorscheme nvimgelion')
     end
   }
 }
