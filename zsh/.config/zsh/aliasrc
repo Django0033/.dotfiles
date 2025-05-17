@@ -22,6 +22,11 @@ else
     alias lla='ls -la --color=auto --group-directories-first'
 fi
 
+if command -v zoxide &> /dev/null; then
+    alias cd='z'
+    alias cdi='zi'
+fi
+
 #git
 alias gs='git fetch; git status'
 alias ga='git add'
@@ -67,4 +72,8 @@ alias nz="nvim ~/.zshrc"
 alias rpg='rpg-cli'
 alias rcd='rpg-cli cd'
 alias rls='rpg-cli ls'
+
 alias icat="kitty +kitten icat"
+
+alias chwall='~/.config/hypr/scripts/change_wall.sh'
+alias rdwall='~/.config/hypr/scripts/random_wallpaper_and_colors.sh'

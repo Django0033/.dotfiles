@@ -193,7 +193,7 @@ c.url.open_base_url = False
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {"DEFAULT": "https://www.google.com/search?q={}"}
+c.url.searchengines = {"DEFAULT": "https://www.google.com/search?q={}", "aw": "https://wiki.archlinux.org/?search={}"}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
@@ -215,7 +215,7 @@ c.colors.webpage.darkmode.enabled = True
 config.bind("M", "hint links spawn cvlc {hint-url}")
 config.bind(
     "Z",
-    'hint links spawn alacritty -e yt-dlp --add-metadata -ic -o "%(title)s.%(ext)s" {hint-url}',
+    'hint links spawn kitty -e yt-dlp --add-metadata -ic -o "%(title)s.%(ext)s" {hint-url}',
 )
 config.bind("xb", "config-cycle statusbar.show never always")
 config.bind("xt", "config-cycle tabs.show never always")
@@ -225,10 +225,12 @@ config.bind(
 )
 config.bind("J", "tab-prev")
 config.bind("K", "tab-next")
+config.bind(";si", "hint images download")
 
 # Load existing settings made via :set
 config.load_autoconfig()
 
 dracula.draw.blood(c, {"spacing": {"vertical": 6, "horizontal": 8}})
+c.colors.tabs.even.bg = "#00000000"
 
 config.set("hints.chars", "aoeusnth")

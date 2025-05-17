@@ -10,7 +10,9 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.zsh_history
+setopt appendhistory
+setopt share_history
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -82,7 +84,7 @@ source ~/.config/zsh/plugins/dirhistory.plugin.zsh
 
 setopt autocd
 
-fm6000 -r -c random
+fastfetch
 
 if type 'xmodmap' &> /dev/null; then
   xmodmap -e 'clear lock'
@@ -120,5 +122,6 @@ bindkey -s ^a "nvims\n"
 eval "$(starship init zsh)"
 export OPENAI_API_KEY='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'
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
