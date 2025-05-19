@@ -226,6 +226,7 @@ config.bind(
 config.bind("J", "tab-prev")
 config.bind("K", "tab-next")
 config.bind(";si", "hint images download")
+config.bind("M", "hint links spawn mpv {hint-url}")
 
 # Load existing settings made via :set
 config.load_autoconfig()
