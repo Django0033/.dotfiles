@@ -120,8 +120,6 @@ bindkey -s ^a "nvims\n"
 
 # Starship
 eval "$(starship init zsh)"
-export OPENAI_API_KEY='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'
-
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
