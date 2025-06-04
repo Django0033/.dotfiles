@@ -1,0 +1,83 @@
+@import url("./colors.css");
+
+* {
+    all: unset;
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* example usage */
+window#waybar {
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid @color12;
+    border-radius: 10px;
+}
+
+tooltip {
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid @foreground;
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#clock.2
+#clock
+#pulseaudio
+#network
+#battery
+#battery.warning
+#battery.critical
+#workspaces button {
+    color: @foreground;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+#workspaces button.active {
+  color: @color12;
+  transition: all 0.3s ease-in-out;
+}
+
+#clock.2 {
+  color: @foreground;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 13px;
+}
+
+#clock {
+  color: @foreground;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#network {
+  color: @foreground;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#pulseaudio {
+  color: @foreground;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#battery {
+  color: @foreground;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 13px;
+}
+
+#battery.warning {
+  color: #ff0000;
+}
+
+#battery.critical {
+  color: #ffff00;
+}
