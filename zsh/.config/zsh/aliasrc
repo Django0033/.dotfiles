@@ -28,7 +28,7 @@ if command -v zoxide &> /dev/null; then
 fi
 
 #git
-alias gs='git fetch; git status'
+alias gfs='git fetch; git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
@@ -42,6 +42,7 @@ alias r='ranger'
 alias mkd='mkdir'
 alias tmux='tmux -u'
 alias cl='clear'
+alias zt='zathura'
 
 # Aliases for software managment
 # pacman
