@@ -12,7 +12,9 @@ hyprctl hyprpaper wallpaper ",$WALL"
 
 sleep 1
 
-wallust -q run "$WALL"
+matugen image "$WALL"
+
+# wallust -q run "$WALL"
 
 killall waybar && waybar & disown
 
