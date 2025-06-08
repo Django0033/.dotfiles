@@ -16,7 +16,7 @@ hyprctl hyprpaper reload ,"$WALLPAPER"
 
 sleep 1
 
-wallust -q run "$WALLPAPER"
+# wallust -q run "$WALLPAPER"
 
 matugen image "$WALLPAPER"
 
