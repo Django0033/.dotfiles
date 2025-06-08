@@ -10,13 +10,13 @@
 /* example usage */
 window#waybar {
     background: rgba(0, 0, 0, 0.5);
-    border: 3px solid @color12;
+    border: 3px solid @primary_container;
     border-radius: 10px;
 }
 
 tooltip {
     background: rgba(0, 0, 0, 0.5);
-    border: 3px solid @foreground;
+    border: 3px solid @primary_container;
     border-radius: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -38,7 +38,7 @@ tooltip {
 
 
 #workspaces button.active {
-  color: @color12;
+  color: @primary;
   transition: all 0.3s ease-in-out;
 }
 
