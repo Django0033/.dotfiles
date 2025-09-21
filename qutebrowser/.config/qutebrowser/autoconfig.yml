@@ -6,12 +6,23 @@
 
 config_version: 2
 settings:
+  colors.webpage.darkmode.enabled:
+    global: false
   content.blocking.method:
     global: both
+  content.javascript.clipboard:
+    https://chat.deepseek.com: access-paste
+    https://chatgpt.com: access-paste
+    https://github.com: access-paste
   content.media.audio_capture:
     https://chatgpt.com: true
+  content.notifications.enabled:
+    https://raf.ontp.app: true
+    https://web.whatsapp.com: true
   statusbar.show:
     global: always
+  tabs.select_on_remove:
+    global: prev
   tabs.show:
     global: always
   url.searchengines:
