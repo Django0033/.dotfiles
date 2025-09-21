@@ -2,24 +2,47 @@
 
 * {
     all: unset;
-    font-family: 'Fira Code', monospace;
-    font-size: 18px;
+    font-family: 'Fira Code Nerd Font', monospace;
+    font-size: 16px;
+    border-radius: 50px;
     font-weight: bold;
 }
 
 /* example usage */
 window#waybar {
-    background: rgba(0, 0, 0, 0.5);
-    border: 3px solid @primary_container;
-    border-radius: 10px;
+    background-color: transparent;
+    color: @secondary;
 }
 
-tooltip {
-    background: rgba(0, 0, 0, 0.5);
+.modules-right {
+    margin-right: 12px;
+    padding: 0px 20px 0px 20px;
+    background-color: @surface_container_low;
     border: 3px solid @primary_container;
-    border-radius: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+}
+
+.modules-left {
+    margin-left: 12px;
+    padding: 0px 20px 0px 20px;
+    background-color: @surface_container_low;
+    border: 3px solid @primary_container;
+}
+
+#workspaces {
+    background-color: @surface_container_low;
+    padding: 2px 4px 2px 2px;
+    margin-left: 12px;
+    border: 3px solid @primary_container;
+}
+
+#workspaces button.active {
+    color: @primary;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: @outline;
+    transition: all 0.3s ease-in-out;
 }
 
 #clock.2
@@ -28,56 +51,38 @@ tooltip {
 #network
 #battery
 #battery.warning
-#battery.critical
-#workspaces button {
-    color: @foreground;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    transition: all 0.3s ease-in-out;
+#battery.critical {
+    color: @primary;
+    /* background-color: @surface_container; */
 }
 
 
-#workspaces button.active {
-  color: @primary;
-  transition: all 0.3s ease-in-out;
-}
 
 #clock.2 {
-  color: @foreground;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 13px;
+  color: @primary;
 }
 
 #clock {
-  color: @foreground;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  color: @primary;
 }
 
 #network {
-  color: @foreground;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  color: @primary;
 }
 
 #pulseaudio {
-  color: @foreground;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  color: @primary;
 }
 
 #battery {
-  color: @foreground;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-right: 13px;
+  color: @primary;
+    padding-right: 15px;
 }
 
 #battery.warning {
-  color: #ff0000;
+  color: @error;
 }
 
 #battery.critical {
-  color: #ffff00;
+  color: @error_container;
 }
