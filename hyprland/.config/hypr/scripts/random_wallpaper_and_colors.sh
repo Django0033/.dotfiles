@@ -1,24 +1,23 @@
-#!/bin/bash
+#!/bin/zsh
 
-sleep 1
+echo 0
 
-# Wallpapers directory
+echo "Wallpaper directory set"
 WALLPAPER_DIR="$HOME/Pictures/wallpapers/"
 CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+echo "Select random wallpaper"
 
-hyprpaper & disown
-
-sleep 1
-
-hyprctl hyprpaper reload ,"$WALLPAPER"
+# hyprctl hyprpaper reload ,"$WALLPAPER"
+waypaper --wallpaper $WALLPAPER
 
 sleep 1
 
-# wallust -q run "$WALLPAPER"
+echo "Load wallpaper"
 
 matugen image "$WALLPAPER"
+echo "Set matugen colors"
 
 killall waybar && waybar & disown
 
