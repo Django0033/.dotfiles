@@ -24,11 +24,11 @@ return {
     -- opts = {}
     config = function()
         local capabilities = require('blink.cmp').get_lsp_capabilities()
-        vim.lsp.config('lua_ls', {capabilities = capabilities})
-        -- require("lspconfig").lua_ls.setup{}
-        -- require("lspconfig").markdown.setup{}
         vim.lsp.enable 'lua_ls'
         vim.lsp.enable 'marksman'
         vim.lsp.enable 'cssls'
+        vim.lsp.config('lua_ls', {capabilities = capabilities})
+        vim.lsp.config('marksman', {capabilities = capabilities})
+        vim.lsp.config('cssls', {capabilities = capabilities})
     end,
 }
