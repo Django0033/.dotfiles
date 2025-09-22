@@ -4,6 +4,7 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-fzf-native.nvim',
+        'debugloop/telescope-undo.nvim',
     },
     opts = {
         defaults = {
@@ -20,6 +21,9 @@ return {
             },
         },
     },
+    config = function()
+        require('telescope').load_extension('undo')
+    end,
     keys = {
         {'<leader>tb', function() require('telescope.builtin').buffers() end, desc = 'Telescope Buffers'},
         {'<leader>tc', function() require('telescope.builtin').colorscheme() end, desc = 'Telescope Colorscheme'},
@@ -29,5 +33,6 @@ return {
         {'<leader>th', function() require('telescope.builtin').help_tags() end, desc = 'Telescope Help'},
         {'<leader>tk', function() require('telescope.builtin').keymaps() end, desc = 'Telescope Keymaps'},
         {'<leader>to', function() require('telescope.builtin').oldfiles() end, desc = 'Telescope Oldfiles'},
+        {'<leader>tu', '<cmd>Telescope undo<CR>', desc = 'Telescope Undo'},
     },
 }
