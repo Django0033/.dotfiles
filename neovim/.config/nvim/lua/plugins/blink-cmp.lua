@@ -26,6 +26,7 @@ return {
 
             sources = {
                 default = {'lsp', 'path', 'snippets', 'buffer'},
+                {name = 'obsidian'},
             },
 
             fuzzy = {implementation = 'prefer_rust_with_warning'},
