@@ -33,6 +33,6 @@ return {
         {'<leader>th', function() require('telescope.builtin').help_tags() end, desc = 'Telescope Help'},
         {'<leader>tk', function() require('telescope.builtin').keymaps() end, desc = 'Telescope Keymaps'},
         {'<leader>to', function() require('telescope.builtin').oldfiles() end, desc = 'Telescope Oldfiles'},
-        {'<leader>tu', '<cmd>Telescope undo<CR>', desc = 'Telescope Undo'},
+        {'<leader>tu', function() vim.cmd 'Telescope undo' end, desc = 'Telescope Undo'},
     },
 }
