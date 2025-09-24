@@ -28,6 +28,20 @@ return {
             folder = 'templates'
         },
 
+        --@param title string|?
+        --@return string
+        note_id_func = function (title)
+            local suffix = ""
+            if title ~= nil then
+                suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+            else
+                for _ = 1, 4 do
+                    suffix = suffix .. string.char(math.random(65, 90))
+                end
+            end
+            return tostring(os.time()) .. "-" .. suffix
+        end
+
     },
 
     keys = {
@@ -36,6 +50,7 @@ return {
             vim.cmd 'bdel'
         end, desc = 'Obsidian Delete'},
 
+        {'<leader>oa', function() vim.cmd 'ObsidianTags' end, desc = 'Obsidian Tags'},
         {'<leader>on', function() vim.cmd 'ObsidianNew' end, desc = 'Obsidian New Note'},
         {'<leader>oq', function() vim.cmd 'ObsidianQuickSwitch' end, desc = 'Obsidian Quick Switch'},
         {'<leader>or', function() vim.cmd 'ObsidianRename' end, desc = 'Obsidian Rename'},
