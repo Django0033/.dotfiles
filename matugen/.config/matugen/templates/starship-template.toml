@@ -1,0 +1,96 @@
+format = """
+[░▒▓](color3)\
+[   ](bg:color3 fg:color4)\
+[▓▒░](bg:color2 fg:color3)\
+$directory\
+[▓▒░](fg:color2 bg:color6)\
+$python\
+$lua\
+$nodejs\
+$rust\
+$golang\
+$php\
+[▓▒░](fg:#212736)\
+$fill\
+[░▒▓](fg:color6 bg:#212736)\
+$git_branch\
+$git_status\
+[▓▒░](fg:color6 bg:#1d2230)\
+$time\
+[▓▒░ ](fg:#1d2230)\
+\n$character"""
+
+palette = 'colors'
+
+[palettes.colors]
+mustard = '#af8700' # example
+color1 = '{{colors.primary_fixed_dim.default.hex}}'
+color2 = '{{colors.on_primary.default.hex}}'
+color3 = '{{colors.on_surface_variant.default.hex}}'
+color4 = '{{colors.surface_container.default.hex}}'
+color5 = '{{colors.on_primary.default.hex}}'
+color6 = '{{colors.surface_dim.default.hex}}'
+color7 = '{{colors.surface.default.hex}}'
+color8 = '{{colors.primary.default.hex}}'
+color9 = '{{colors.tertiary.default.hex}}'
+
+[character]
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
+
+[directory]
+style = "fg:color9 bg:color2"
+format = "[ $path ]($style)"
+truncation_length = 9
+# truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:color6"
+format = '[[ $symbol $branch ](fg:color9 bg:color6)]($style)'
+
+[git_status]
+style = "bg:color6"
+format = '[[($all_status$ahead_behind )](fg:color9 bg:color6)]($style)'
+
+[lua]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:color9 bg:#212736)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:color9 bg:#212736)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:color9 bg:#212736)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:color9 bg:#212736)]($style)'
+
+[golang]
+symbol = "ﳑ"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:color9 bg:#212736)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:color9 bg:#212736)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:color9 bg:#1d2230)]($style)'
