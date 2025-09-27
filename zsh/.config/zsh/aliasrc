@@ -22,9 +22,13 @@ else
     alias lla='ls -la --color=auto --group-directories-first'
 fi
 
+# Replace cd with zoxide
 if command -v zoxide &> /dev/null; then
-    alias cd='z'
+    # alias cd='z'
     alias cdi='zi'
+    function cd() {
+        z "$@" && la
+        }
 fi
 
 #git
