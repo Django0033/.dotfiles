@@ -15,15 +15,6 @@ if ! pgrep -x "swww-daemon" > /dev/null; then
     sleep 1 # Give the daemon a moment to start
 fi
 
-# Set the wallpaper with swww, including a random transition (optional)
-# if [ -n "$RANDOM_WALLPAPER" ]; then
-#     swww img "$RANDOM_WALLPAPER" \
-#         --transition-type random \
-#         --transition-fps 60 \
-#         # --transition-duration 0.7
-#         --transition-duration 1
-# fi
-
 # Load wallpaper
 swww img ~/.cache/current_wallpaper.jpg \
     --transition-type random \
@@ -33,3 +24,4 @@ swww img ~/.cache/current_wallpaper.jpg \
 matugen image ~/.cache/current_wallpaper.jpg
 
 killall waybar && waybar & disown
+killall swaync && swaync & disown
