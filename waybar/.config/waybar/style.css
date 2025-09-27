@@ -45,6 +45,7 @@ window#waybar {
     transition: all 0.3s ease-in-out;
 }
 
+#custom-notification
 #clock.2
 #clock
 #pulseaudio
@@ -56,7 +57,10 @@ window#waybar {
     /* background-color: @surface_container; */
 }
 
-
+#custom-notification {
+  color: @primary;
+  margin-right: 5px;
+}
 
 #clock.2 {
   color: @primary;
