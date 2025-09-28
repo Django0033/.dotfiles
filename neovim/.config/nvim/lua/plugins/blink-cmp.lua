@@ -2,7 +2,9 @@ return {
     {
         'saghen/blink.cmp',
         dependencies = {
-            'rafamadriz/friendly-snippets'
+            'rafamadriz/friendly-snippets',
+            -- {'tzachar/cmp-tabnine', opts = {}},
+            -- {'saghen/blink.compat', opts = {}},
         },
 
         version = 'v1.*',
@@ -27,11 +29,16 @@ return {
             sources = {
                 default = {'lsp', 'path', 'snippets', 'buffer'},
                 {name = 'obsidian'},
+                -- {
+                --     module = 'blink.compat.source',
+                --     name = 'cmp_tabnine',
+                --     opts = {},
+                -- },
             },
 
             fuzzy = {implementation = 'prefer_rust_with_warning'},
 
             signature = {enabled = true},
-        }
+        },
     },
 }

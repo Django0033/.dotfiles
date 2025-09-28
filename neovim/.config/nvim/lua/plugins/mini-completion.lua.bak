@@ -1,8 +1,0 @@
-return {
-	'echasnovski/mini.completion',
-	version = false,
-    dependencies = {
-        {'echasnovski/mini.snippets', opt = {},}
-    },
-	opts = {},
-}
