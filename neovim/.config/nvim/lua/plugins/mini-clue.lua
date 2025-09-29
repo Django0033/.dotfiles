@@ -1,6 +1,7 @@
 return {
-	'echasnovski/mini.clue',
+	'nvim-mini/mini.clue',
 	version = false,
+
 	opts = {
 		triggers = {
 			{mode = 'n', keys = '<Leader>'},
@@ -12,14 +13,16 @@ return {
 			{mode = 'n', keys = '='},
 			{mode = 'x', keys = '='},
 		},
+
 		clues = {
 			{mode = 'n', keys = '<Leader>b', desc = '+Buffer'},
+			{mode = 'n', keys = '<Leader>d', desc = '+Diff'},
+			{mode = 'n', keys = '<Leader>g', desc = '+Git'},
 			{mode = 'n', keys = '<Leader>l', desc = '+Lazy'},
 			{mode = 'n', keys = '<Leader>m', desc = '+Mini'},
 			{mode = 'n', keys = '<Leader>o', desc = '+Obsidian'},
 			{mode = 'n', keys = '<Leader>p', desc = '+Pick'},
 			{mode = 'n', keys = '<Leader>r', desc = '+Reload'},
-			-- {mode = 'n', keys = '<Leader>t', desc = '+Telescope'},
 		},
 	},
 }
