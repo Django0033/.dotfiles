@@ -15,6 +15,6 @@ return {
         {'<leader>ga', '<cmd>Git add %<CR>', desc = 'Git Add'},
         {'<leader>gc', '<cmd>horizontal Git commit<CR>', desc = 'Git Commit'},
         {'<leader>gP', '<cmd>Git push<CR>', desc = 'Git Push'},
-        {'<leader>gh', '<cmd>lua MiniGit.show_at_cursor()<CR>', desc = 'Git Show'},
+        {'<leader>gh', '<cmd>vertical lua MiniGit.show_at_cursor()<CR>', desc = 'Git Show'},
     }
 }
