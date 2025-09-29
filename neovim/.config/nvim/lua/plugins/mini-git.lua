@@ -11,7 +11,7 @@ return {
     end,
 
     keys = {
-        {'<leader>gs', '<cmd>Git status<CR>', desc = 'Git Status'},
+        {'<leader>gs', '<cmd>horizontal Git status<CR>', desc = 'Git Status'},
         {'<leader>ga', '<cmd>Git add %<CR>', desc = 'Git Add'},
         {'<leader>gc', '<cmd>horizontal Git commit<CR>', desc = 'Git Commit'},
         {'<leader>gP', '<cmd>Git push<CR>', desc = 'Git Push'},
