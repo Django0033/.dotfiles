@@ -13,7 +13,7 @@ return {
     keys = {
         {'<leader>gs', '<cmd>Git status<CR>', desc = 'Git Status'},
         {'<leader>ga', '<cmd>Git add %<CR>', desc = 'Git Add'},
-        {'<leader>gc', '<cmd>Git commit<CR>', desc = 'Git Commit'},
+        {'<leader>gc', '<cmd>horizontal Git commit<CR>', desc = 'Git Commit'},
         {'<leader>gP', '<cmd>Git push<CR>', desc = 'Git Push'},
         {'<leader>gh', '<cmd>lua MiniGit.show_at_cursor()<CR>', desc = 'Git Show'},
     }
