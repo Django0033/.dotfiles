@@ -53,3 +53,10 @@ set.inccommand = 'split' -- Preview substitutions live, as you type!
 vim.g.have_nerd_font = true -- Set to true if you have a Nerd Font installed and selected in the terminal
 
 vim.g.markdown_recommended_style = 0
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+    vim.treesitter.start()
+    end,
+})
