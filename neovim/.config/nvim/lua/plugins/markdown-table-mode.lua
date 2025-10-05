@@ -1,4 +1,8 @@
 return {
     'Kicamon/markdown-table-mode.nvim',
-    opts = {},
+    opts = {
+        filetype = {
+            '*.md'
+        }
+    },
 }
