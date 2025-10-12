@@ -8,6 +8,8 @@ if status is-interactive && type -q fastfetch
     fastfetch
 end
 
+set -gx EDITOR nvim
+
 source ~/.config/fish/conf.d/aliases.fish
 
 fzf --fish | source

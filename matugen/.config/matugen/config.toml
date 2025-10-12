@@ -24,3 +24,7 @@ output_path = '~/.config/rofi/colors.rasi'
 [templates.starship]
 input_path = '~/.config/matugen/templates/starship-template.toml'
 output_path = '~/.config/starship.toml'
+
+[templates.niri]
+input_path = '~/.config/matugen/templates/niri.kdl.template'
+output_path = '~/.config/niri/config.kdl'
