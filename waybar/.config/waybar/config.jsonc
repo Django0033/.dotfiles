@@ -16,7 +16,8 @@
     ],
 
     "modules-center": [
-        "niri/workspaces"
+        // "niri/workspaces"
+        "hyprland/workspaces"
     ],
 
     "modules-right": [
@@ -60,7 +61,8 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
 
-    "niri/workspaces": {
+    // "niri/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
@@ -70,9 +72,9 @@
             "active": "",
             "default": ""
         },
-        "persistent-workspaces": {
-            "*": 3
-        },
+        // "persistent-workspaces": {
+        //     "*": 3
+        // },
         "all-outputs": false,
     },
 
