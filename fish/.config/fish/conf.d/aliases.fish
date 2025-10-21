@@ -66,5 +66,5 @@ alias rls 'rpg-cli ls'
 
 alias icat "kitty +kitten icat"
 
-alias chwall '~/.config/hypr/scripts/change_wall.sh'
-alias rdwall '~/.config/hypr/scripts/swww_random_wall.sh'
+# alias chwall '~/.config/hypr/scripts/change_wall.sh'
+# alias rdwall '~/.config/hypr/scripts/swww_random_wall.sh'

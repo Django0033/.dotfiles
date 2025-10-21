@@ -1,13 +1,14 @@
 #!/bin/bash
 
-# Directory containing your wallpapers
-WALLPAPER_DIR="$HOME/Pictures/wallpapers"
+# read -p "Route to your: " WALL
+# WALL=$(find ~/Pictures/wallpapers -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.gif" \) | fzf --preview="kitty +kitten icat --transfer-mode memory {}")
 
-# Select a random wallpaper
-RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" \) | shuf -n 1)
+WALL=$(find ~/Pictures/wallpapers -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.gif" \) | fzf --preview="fzf-preview {}")
+
+echo $WALL
 
 # Copy the random wallpaper to the cache
-cp $RANDOM_WALLPAPER ~/.cache/current_wallpaper.jpg
+cp $WALL ~/.cache/current_wallpaper.jpg
 
 # Start the swww-daemon if it's not already running
 if ! pgrep -x "swww-daemon" > /dev/null; then
@@ -16,6 +17,7 @@ if ! pgrep -x "swww-daemon" > /dev/null; then
 fi
 
 # Load wallpaper
+swww clear-cache
 swww img ~/.cache/current_wallpaper.jpg \
     --transition-type random \
     --transition-fps 60 \
@@ -24,4 +26,3 @@ swww img ~/.cache/current_wallpaper.jpg \
 matugen image ~/.cache/current_wallpaper.jpg
 
 killall waybar && waybar & disown
-killall swaync && swaync & disown
