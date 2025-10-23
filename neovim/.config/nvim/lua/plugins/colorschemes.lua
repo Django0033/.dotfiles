@@ -10,7 +10,7 @@ return {
         'folke/tokyonight.nvim',
         config = function ()
             -- vim.cmd.colorscheme 'tokyonight'
-            vim.cmd.colorscheme 'tokyonight-night'
+            -- vim.cmd.colorscheme 'tokyonight-night'
         end
     },
 
@@ -20,7 +20,7 @@ return {
             glow = true,
         },
         config = function()
-            -- vim.cmd.colorscheme 'fluoromachine'
+            vim.cmd.colorscheme 'fluoromachine'
         end,
     },
 

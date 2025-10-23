@@ -24,15 +24,15 @@ palette = 'colors'
 
 [palettes.colors]
 mustard = '#af8700' # example
-color1 = '#86d1e9'
-color2 = '#003641'
-color3 = '#bfc8cb'
-color4 = '#1b2022'
-color5 = '#003641'
-color6 = '#0f1416'
-color7 = '#0f1416'
-color8 = '#86d1e9'
-color9 = '#c0c4eb'
+color1 = '#ffb3ac'
+color2 = '#561e1a'
+color3 = '#d8c2bf'
+color4 = '#271d1c'
+color5 = '#561e1a'
+color6 = '#1a1110'
+color7 = '#1a1110'
+color8 = '#ffb3ac'
+color9 = '#e1c38c'
 
 [character]
 success_symbol = '[](bold green)'
