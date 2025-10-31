@@ -24,7 +24,8 @@ return {
     -- opts = {}
     config = function()
         local capabilities = require('blink.cmp').get_lsp_capabilities()
-        vim.lsp.enable 'bash-language-server'
+        -- vim.lsp.enable 'bash-language-server'
+        vim.lsp.enable 'bashls'
         vim.lsp.enable 'cssls'
         vim.lsp.enable 'ltext-ls'
         vim.lsp.enable 'lua_ls'

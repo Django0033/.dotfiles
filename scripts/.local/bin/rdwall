@@ -19,7 +19,7 @@ fi
 swww clear-cache
 sleep 1
 swww img ~/.cache/current_wallpaper.jpg \
-    --transition-type random \
+    --transition-type any \
     --transition-fps 60 \
     --transition-duration 1
 
