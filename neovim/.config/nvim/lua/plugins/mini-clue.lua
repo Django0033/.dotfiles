@@ -16,7 +16,7 @@ return {
 
 		clues = {
 			{mode = 'n', keys = '<Leader>b', desc = '+Buffer'},
-			{mode = 'n', keys = '<Leader>d', desc = '+Diff'},
+			{mode = 'n', keys = '<Leader>d', desc = '+Dice'},
 			{mode = 'n', keys = '<Leader>g', desc = '+Git'},
 			{mode = 'n', keys = '<Leader>l', desc = '+Lazy'},
 			{mode = 'n', keys = '<Leader>m', desc = '+Mini'},

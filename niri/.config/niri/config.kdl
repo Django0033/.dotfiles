@@ -203,7 +203,7 @@ layout {
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
         //
-        active-gradient from="#ffb4aa" to="#73342c" angle=45
+        active-gradient from="#80d5d0" to="#00504d" angle=45
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
