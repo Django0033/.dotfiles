@@ -123,3 +123,12 @@ end, { noremap = true, desc = 'Lazy' })
 map('n', '<leader>ls', function ()
     cmd [[Lazy sync]]
 end, { noremap = true, desc = 'Lazy Sync' })
+
+vim.api.nvim_create_autocmd('FileType',{
+    pattern = 'markdown',
+    callback = function ()
+        vim.cmd('nnoremap <leader>h1 I# <esc>')
+        vim.cmd('nnoremap <leader>h2 I## <esc>')
+        vim.cmd('nnoremap <leader>h3 I### <esc>')
+    end
+})
