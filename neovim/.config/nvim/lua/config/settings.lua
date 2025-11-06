@@ -57,7 +57,10 @@ vim.g.markdown_recommended_style = 0
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     callback = function()
-    vim.treesitter.start()
+        vim.treesitter.start()
+        vim.cmd('setlocal textwidth=80')
+        vim.cmd('setlocal wrap linebreak')
+        vim.cmd('setlocal spell spelllang=en_us')
     end,
 })
 
