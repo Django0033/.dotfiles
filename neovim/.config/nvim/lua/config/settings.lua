@@ -60,3 +60,15 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.treesitter.start()
     end,
 })
+
+vim.g.markdown_fenced_languages = {
+    'html',
+    'javascript',
+    'typescript',
+    'css',
+    'scss',
+    'lua',
+    'vim',
+    'python',
+    'bash',
+}
