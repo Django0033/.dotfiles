@@ -75,3 +75,8 @@ vim.g.markdown_fenced_languages = {
     'python',
     'bash',
 }
+
+vim.diagnostic.config({
+    virtual_text = false,
+    virtual_lines = {only_current_line = true}
+})
