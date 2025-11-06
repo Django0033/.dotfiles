@@ -23,5 +23,6 @@ return {
 		{ '<leader>ph', function () vim.cmd 'Pick help' end, desc = 'Pick Help'},
 		{ '<leader>pk', function () vim.cmd 'lua MiniExtra.pickers.keymaps()' end, desc = 'Pick Keymaps'},
         { '<leader>po', function () vim.cmd 'lua MiniExtra.pickers.oldfiles()' end, desc = 'Pick Old Files'},
+        { '<leader>ps', function () vim.cmd 'lua MiniExtra.pickers.spellsuggest()' end, desc = 'Pick Spell Suggestions'},
 	},
 }
