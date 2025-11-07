@@ -98,6 +98,14 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 })
 -- [[]]
 
+-- [[ Smart auto-save with update command ]]
+vim.api.nvim_create_autocmd({'BufLeave', 'FocusLost'}, {
+    pattern = '*',
+    command = 'silent! update',
+    desc = 'Auto-save on leave/lost focus',
+})
+-- [[]]
+
 vim.g.markdown_fenced_languages = {
     'html',
     'javascript',

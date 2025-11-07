@@ -51,8 +51,6 @@ map('n', '<leader>b-', function()
 end, {noremap = true, silent = true, desc = 'Buffer Split -5'}
 )
 
-map('i', '<esc>', '<esc><esc><cmd>w<cr>', opts)
-
 map('n', '<leader>rc', function()
     cmd [[luafile %]]
 end, {noremap = true, silent = false, desc = 'Reload Current File'}
