@@ -89,6 +89,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+-- [[]]
+
+-- [[ Remove trailing whitespace on save ]]
+vim.api.nvim_create_autocmd('BufWritePre', {
+    pattern = '*',
+    command = '%s/\\s\\+$//e'
+})
+-- [[]]
 
 vim.g.markdown_fenced_languages = {
     'html',
