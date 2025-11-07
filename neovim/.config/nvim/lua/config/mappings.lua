@@ -104,17 +104,6 @@ map('n', '<c-l>', '<c-w>l', opts)
 map('n', '<c-j>', '<c-w>j', opts)
 map('n', '<c-k>', '<c-w>k', opts)
 
--- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
-
 -- [[ Lazy ]]
 map('n', '<leader>lz', function ()
     cmd [[Lazy]]
