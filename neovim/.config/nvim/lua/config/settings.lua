@@ -49,6 +49,7 @@ set.writebackup = false -- If a file is being edited by another program, it is n
 set.list = true -- Sets how neovim will display certain whitespaces characters in the editor
 set.listchars = {tab = '>> ', trail = '.', nbsp = '_'}
 set.inccommand = 'split' -- Preview substitutions live, as you type!
+set.autochdir = true
 
 vim.g.have_nerd_font = true -- Set to true if you have a Nerd Font installed and selected in the terminal
 
