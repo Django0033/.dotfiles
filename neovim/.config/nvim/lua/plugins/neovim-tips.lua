@@ -20,29 +20,29 @@ return {
     },
     keys = {
         {
-            "<leader>nto",
+            "<leader>to",
             ":NeovimTips<CR>",
-            desc = "Neovim tips"
+            desc = "Tips Open"
         },
         {
-            "<leader>ntr",
+            "<leader>tr",
             ":NeovimTipsRandom<CR>",
-            desc = "Show random tip"
+            desc = "Tips Random"
         },
         {
-            "<leader>nte",
+            "<leader>te",
             ":NeovimTipsEdit<CR>",
-            desc = "Edit your tips"
+            desc = "Tips Edit"
         },
         {
-            "<leader>nta",
+            "<leader>ta",
             ":NeovimTipsAdd<CR>",
-            desc = "Add your tip"
+            desc = "Tips Add"
         },
         {
-            "<leader>ntp",
+            "<leader>tp",
             ":NeovimTipsPdf<CR>",
-            desc = "Open tips PDF"
+            desc = "Tips PDF"
         }
     }
 }
