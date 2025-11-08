@@ -7,8 +7,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Better up and down / Remap for dealing with word wrap
-map('n', 'k', "v:count == 0 ? 'gkzz' : 'k'", { expr = true, silent = true })
-map('n', 'j', "v:count == 0 ? 'gjzz' : 'j'", { expr = true, silent = true })
+map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Buffer controls
 map('n', '<S-l>', function()
