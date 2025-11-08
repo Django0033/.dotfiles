@@ -16,7 +16,7 @@ return {
         -- Note: Set to 0 when using lazy = true, or use Option 2 below
         daily_tip = 0, -- 0 = off, 1 = once per day, 2 = every startup
         -- Other optional settings...
-        bookmark_symbol = "🌟 "
+        bookmark_symbol = " "
     },
     keys = {
         {
