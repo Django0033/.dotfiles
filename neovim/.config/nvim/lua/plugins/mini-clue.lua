@@ -23,6 +23,7 @@ return {
 			{mode = 'n', keys = '<Leader>o', desc = '+Obsidian'},
 			{mode = 'n', keys = '<Leader>p', desc = '+Pick'},
 			{mode = 'n', keys = '<Leader>r', desc = '+Reload'},
+			{mode = 'n', keys = '<Leader>t', desc = '+Tips'},
 			{mode = 'n', keys = '<Leader>v', desc = '+Visit'},
 		},
 	},
