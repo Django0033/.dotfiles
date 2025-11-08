@@ -10,13 +10,6 @@ input_path = './templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
-[templates.kitty]
-input_path = '~/.config/matugen/templates/kitty-colors.conf'
-output_path = '~/.config/kitty/current-theme.conf'
-# post_hook = 'kitty @ set-colors -a -c ~/.config/kitty/current-theme.conf'
-post_hook = 'pkill -SIGUSR1 kitty'
-# post_hook = "kitty +kitten themes --reload-in=all current-theme"
-
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'
