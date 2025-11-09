@@ -5,8 +5,8 @@
         // "type": "small"
         "type": "kitty-direct",
         "source": "~/.config/fastfetch/fast-girl.png",
-        "width": 30,
-        "height": 15
+        "width": 20,
+        "height": 8
     },
     "display": {
         "separator": "",
