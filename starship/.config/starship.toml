@@ -30,12 +30,12 @@ palette = "matugen"
 
 
 [palettes.matugen]
-arrow = '#ffb4a6'
-os = '#733428'
-os_admin = '#733428'
-directory = '#5d3f3a'
+arrow = '#81d4dc'
+os = '#004f55'
+os_admin = '#004f55'
+directory = '#324b4d'
 node = "green"
-time = '#554519'
+time = '#384764'
 git = '#93000a'
 git_status = "#8B1D2C"
 python = "#3776AB"
@@ -43,9 +43,9 @@ conda = "#3EB049"
 java = "#861215"
 rust = "#C33C00"
 clang = "#00599D"
-duration = '#271d1c'
-text_color = '#dcc48c'
-text_light = '#dcc48c'
+duration = '#1a2121'
+text_color = '#b7c7ea'
+text_light = '#b7c7ea'
 
 [palettes.old]
 arrow = "#353535"
