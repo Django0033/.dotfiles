@@ -27,3 +27,5 @@ matugen image ~/.cache/current_wallpaper.jpg
 
 killall waybar && waybar & disown
 killall swaync && swaync & disown
+
+niri-genconfig generate

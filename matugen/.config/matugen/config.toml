@@ -20,4 +20,4 @@ output_path = '~/.config/starship.toml'
 
 [templates.niri]
 input_path = '~/.config/matugen/templates/niri.kdl.template'
-output_path = '~/.config/niri/config.kdl'
+output_path = '~/.config/niri/configs/visuals.kdl'
