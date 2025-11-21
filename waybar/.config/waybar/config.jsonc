@@ -16,8 +16,8 @@
     ],
 
     "modules-center": [
-        // "niri/workspaces"
-        "hyprland/workspaces"
+        "niri/workspaces"
+        // "hyprland/workspaces"
     ],
 
     "modules-right": [
@@ -61,8 +61,8 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
 
-    // "niri/workspaces": {
-    "hyprland/workspaces": {
+    "niri/workspaces": {
+    // "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
