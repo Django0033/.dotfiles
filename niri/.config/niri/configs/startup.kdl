@@ -14,3 +14,4 @@ spawn-at-startup "sh" "-c" "$HOME/.local/bin/rdwall"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 // spawn-sh-at-startup "niri-companion daemon"
+spawn-sh-at-startup "stasis"

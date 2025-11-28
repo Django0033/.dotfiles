@@ -199,7 +199,7 @@ layout {
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
         //
-        active-gradient from="#81d4dc" to="#004f55" angle=45
+        active-gradient from="#8ecff2" to="#004d67" angle=45
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
@@ -374,6 +374,7 @@ spawn-at-startup "sh" "-c" "$HOME/.local/bin/rdwall"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 // spawn-sh-at-startup "niri-companion daemon"
+spawn-sh-at-startup "stasis"
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
