@@ -7,58 +7,65 @@ return {
     -- },
 
     {
-        'dracula/vim',
-        name = 'dracula',
-        config = function ()
+        "dracula/vim",
+        event = "VeryLazy",
+        name = "dracula",
+        config = function()
             -- vim.cmd.colorscheme 'dracula'
-        end
+        end,
     },
 
     {
-        'folke/tokyonight.nvim',
-        config = function ()
-            vim.cmd.colorscheme 'tokyonight'
+        "folke/tokyonight.nvim",
+        event = "VeryLazy",
+        config = function()
+            vim.cmd.colorscheme("tokyonight")
             -- vim.cmd.colorscheme 'tokyonight-night'
-        end
+        end,
     },
 
     {
-        'catppuccin/nvim',
-        name = 'catppuccin',
+        "catppuccin/nvim",
+        event = "VeryLazy",
+        name = "catppuccin",
         opts = {
             auto_integrations = true,
         },
-        config = function ()
+        config = function()
             -- vim.cmd.colorscheme 'catppuccin'
-        end
+        end,
     },
 
     {
-        'rebelot/kanagawa.nvim',
-        config = function ()
+        "rebelot/kanagawa.nvim",
+        event = "VeryLazy",
+        config = function()
             -- vim.cmd.colorscheme 'kanagawa'
-        end
+        end,
     },
 
     {
-        'EdenEast/nightfox.nvim',
-        config = function ()
+        "EdenEast/nightfox.nvim",
+        event = "VeryLazy",
+        config = function()
             -- vim.cmd.colorscheme 'carbonfox'
-        end
+        end,
     },
 
     {
-        'navarasu/onedark.nvim',
-        config = function ()
-            require('onedark').setup {
-                style = 'deep',
-            }
+        "navarasu/onedark.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("onedark").setup({
+                style = "deep",
+            })
             -- vim.cmd.colorscheme 'onedark'
-        end
+        end,
     },
 
     {
-        'maxmx03/fluoromachine.nvim',
+        "maxmx03/fluoromachine.nvim",
+        event = "VeryLazy",
         opts = {
             glow = true,
         },
@@ -68,8 +75,9 @@ return {
     },
 
     {
-        'nyngwang/nvimgelion',
-        config = function ()
+        "nyngwang/nvimgelion",
+        event = "VeryLazy",
+        config = function()
             -- vim.cmd.colorscheme 'nvimgelion'
         end,
     },

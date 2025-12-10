@@ -1,5 +1,5 @@
 return {
-    'neovim/nvim-lspconfig',
+    "neovim/nvim-lspconfig",
     lazy = false,
     dependencies = {
         {
@@ -11,29 +11,29 @@ return {
                 },
             },
         },
-        {'mason-org/mason.nvim', opts = {}},
-        {'mason-org/mason-lspconfig.nvim', opts = {}},
-        'WhoIsSethDaniel/mason-tool-installer.nvim',
+        { "mason-org/mason.nvim",           opts = {} },
+        { "mason-org/mason-lspconfig.nvim", opts = {} },
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
 
         -- Useful status updates for LSP
-        {'j-hui/fidget.nvim', opts = {}},
+        { "j-hui/fidget.nvim", opts = {} },
 
         -- Allows extra capabilities provided by blink.cmp
         -- 'saghen/blink.cmp',
     },
     -- opts = {}
     config = function()
-        local capabilities = require('blink.cmp').get_lsp_capabilities()
+        local capabilities = require("blink.cmp").get_lsp_capabilities()
         -- vim.lsp.enable 'bash-language-server'
-        vim.lsp.enable 'bashls'
-        vim.lsp.enable 'cssls'
-        vim.lsp.enable 'ltext-ls'
-        vim.lsp.enable 'lua_ls'
-        vim.lsp.enable 'marksman'
-        vim.lsp.config('bash-language-server', {capabilities = capabilities})
-        vim.lsp.config('cssls', {capabilities = capabilities})
-        vim.lsp.config('ltext-ls', {capabilities = capabilities})
-        vim.lsp.config('lua_ls', {capabilities = capabilities})
-        vim.lsp.config('marksman', {capabilities = capabilities})
+        vim.lsp.enable("bashls")
+        vim.lsp.enable("cssls")
+        vim.lsp.enable("ltext-ls")
+        vim.lsp.enable("lua_ls")
+        vim.lsp.enable("marksman")
+        vim.lsp.config("bash-language-server", { capabilities = capabilities })
+        vim.lsp.config("cssls", { capabilities = capabilities })
+        vim.lsp.config("ltext-ls", { capabilities = capabilities })
+        vim.lsp.config("lua_ls", { capabilities = capabilities })
+        vim.lsp.config("marksman", { capabilities = capabilities })
     end,
 }
