@@ -9,6 +9,7 @@ if status is-interactive && type -q fastfetch
 end
 
 set -gx EDITOR nvim
+set -gx MANPAGER 'nvim +Man!'
 
 source ~/.config/fish/conf.d/aliases.fish
 
